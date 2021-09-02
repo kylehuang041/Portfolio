@@ -16,7 +16,6 @@ mobileMenuIcon.addEventListener('click', mobileMenuDisplay());
 
 // images from unsplashed.com
 const images = [
-    "ruvim-noga-o0R4iqk1eRQ-unsplash.jpg",
     "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
     "tim-foster-o4mP43oPGHk-unsplash.jpg",
     "luca-micheli-r9RW20TrQ0Y-unsplash.jpg",
@@ -24,15 +23,15 @@ const images = [
     "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 ];
 
-const gallery = document.querySelector('.gallery');
+const galleryImage = document.querySelector('.gallery-img');
+const left = document.querySelector('.prev');
+const right = document.querySelector('.next');
+let slideNum = 0;
 
-window.addEventListener('load', () => {
-    let slide = 0;
-    document.gallery.style.backgroundImage = `url("images/${gallery[changeSlides(slide)]}")`;
-})
+function left() {
+    document.galleryImage.src = `images/${gallery[(slideNum >= 0 && slideNum <= images.length - 2) ? ++slideNum : slideNum]}`;
+}
 
-function changeSlides(slide) {
-    const max = images.length();
-    
-    return slide;
+function right() {
+    document.galleryImage.src = `images/${gallery[(slideNum >= 1 && slideNum <= images.length - 1) ? --slideNum : slideNum]}`;
 }

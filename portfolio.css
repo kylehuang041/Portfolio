@@ -6,6 +6,7 @@
 
 :root {
     font-size: 16px;
+    --text-color: ghostwhite;
 }
 
 nav {
@@ -27,7 +28,7 @@ nav .menu > a {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    color: ghostwhite;
+    color: var(--text-color);
     width: 75px;
     height: 55px;
     z-index: 3;
@@ -79,7 +80,7 @@ nav .dropdown {
 }
 
 nav .dropdown .fa-bars, nav .dropdown .fa-times {
-    color: ghostwhite;
+    color: var(--text-color);
     font-size: 1.5rem;
 }
 
@@ -112,7 +113,7 @@ nav .dropdown #mobile-menu {
 
 nav #mobile-menu a {
     text-decoration: none;
-    color:ghostwhite;
+    color:var(--text-color);
 }
 
 nav #mobile-menu a li {
@@ -142,7 +143,7 @@ nav #mobile-menu a li {
     top: 20%;
     transform: translate(-50%, 20%);
     z-index: 1;
-    color: ghostwhite;
+    color: var(--text-color);
     text-shadow: #352fa5 5px 5px 10px;
     font-size: 1.4rem;
     line-height: 2rem;
@@ -158,15 +159,152 @@ nav #mobile-menu a li {
 
 .gallery {
     width: 100%;
-    height: 600px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 1000px) {
+.gallery > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
+}
+
+.gallery .gallery-bar {
+    background: rgb(85, 84, 84);
+    bottom: 0;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery .gallery-bar:hover {
+    opacity: 1;
+}
+
+.gallery .gallery-bar a {
+    background:rgb(85, 84, 84);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery .gallery-bar a:hover {
+    background: rgb(27, 27, 27);
+}
+
+.gallery .gallery-bar a > i {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.gallery .gallery-bar * {
+    color: var(--text-color);;
+}
+
+.gallery .gallery-bar .prev {
+    left: 0;
+}
+
+.gallery .gallery-bar .next {
+    right: 0;
+}
+
+.grid-container {
+    background: #00B4DB;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    width: 100%;
+    padding: 20px;
+}
+
+.grid-container h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px 15px;
+}
+
+.grid .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background:rgb(1, 51, 133);
+    width: 300px;
+    height: 300px;
+    color: var(--text-color);
+}
+
+footer {
+    background:linear-gradient(270deg, rgb(10, 44, 99), #02224e);
+    width: 100%;
+    height: auto;
+}
+
+footer .footer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var(--text-color);
+    padding: 40px 0;''
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer .contact {
+    line-height: 1.4em;
+}
+
+footer .links li a {
+    text-decoration: none;
+    line-height: 1.4em;
+    color: var(--text-color);
+}
+
+footer .bottom {
+    background:linear-gradient(270deg, rgb(5, 24, 56), #011127);
+    width: 100%;
+    height: 50px;
+}
+
+@media (max-width: 700px) {
     nav .dropdown {
         visibility: visible;
     }
 
     nav .menu {
         visibility: hidden;
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
