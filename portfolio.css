@@ -20,7 +20,7 @@ nav {
     min-height: 55px;
     height: 5vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -84,10 +84,8 @@ nav .dropdown {
     visibility: hidden;
     position: relative;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    margin: -40px 0;
-    float: right;
+    margin-right: 20px;
 }
 
 nav .dropdown .fa-bars, nav .dropdown .fa-times {
