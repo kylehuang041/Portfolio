@@ -1,4 +1,4 @@
-// NAV BAR SECTION
+// NAV BAR SECTION (incomplete)
 const mobileMenuIcon = document.querySelector('.fa-bars');
 const mobileMenu = document.querySelector('#mobile-menu');
 
@@ -9,7 +9,7 @@ const mobileMenuDisplay = () => {
 mobileMenuIcon.addEventListener('click', mobileMenuDisplay());
 
 
-// GALLERY SECTION
+// GALLERY SECTION (incomplete)
 // images from unsplashed.com
 const images = [
     "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
@@ -38,7 +38,7 @@ next.addEventListener('click', right());
 
 
 // EMAIL SUBMISSION
-// Formspree: code and email proxy
+// Formspree: code and email API
 var form = document.getElementById("form");
 
 async function handleSubmit(event) {
