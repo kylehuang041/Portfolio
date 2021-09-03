@@ -149,18 +149,18 @@ nav #mobile-menu a li {
     letter-spacing: 0.1em;
     font-family: var(--title) !important;
     font-weight: 100;
-    left: 5%;
+    left: 2.5%;
     top: 15%;
-    transform: translate(-5%, 15%);
+    transform: translate(-2.5%, 15%);
     text-shadow: rgba(255,255,255,0.3) 0 0 10px;
 }
 
 .intro .text {
     font-family: var(--text);
     position: absolute;
-    left: 50%;
+    left: 52.5%;
     top: 15%;
-    transform: translate(-50%, 15%);
+    transform: translate(-52.5%, 15%);
     z-index: 1;
     color: var(--text-color);
     text-shadow: #352fa5 5px 5px 10px;
