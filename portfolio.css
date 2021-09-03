@@ -9,8 +9,9 @@
 :root {
     font-size: 16px;
     --text-color: ghostwhite;
-    --nav: 'Indie Flower';
-    --intro-text: 'Indie Flower';
+    --text: 'Indie Flower';
+    --title: 'Teko';
+    --alt: 'Permanent Marker';
 }
 
 body {
@@ -143,18 +144,23 @@ nav #mobile-menu a li {
 
 .intro .text > h1 {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1.1em;
-    letter-spacing: 0.2em;
-    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    font-family: var(--title) !important;
+    font-weight: 100;
+    left: 5%;
+    top: 15%;
+    transform: translate(-5%, 15%);
+    text-shadow: rgba(255,255,255,0.3) 0 0 10px;
 }
 
 .intro .text {
-    font-family: 'Indie Flower';
+    font-family: var(--text);
     position: absolute;
     left: 50%;
-    top: 12.5%;
-    transform: translate(-50%, 12.5%);
+    top: 15%;
+    transform: translate(-50%, 15%);
     z-index: 1;
     color: var(--text-color);
     text-shadow: #352fa5 5px 5px 10px;
@@ -249,6 +255,11 @@ nav #mobile-menu a li {
     text-align: center;
     padding-bottom: 20px;
     color: var(--text-color);
+    font-family: var(--title);
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: rgba(255,255,255,0.3) 0 0 10px;
 }
 
 .grid-container {
@@ -302,6 +313,12 @@ nav #mobile-menu a li {
 .family-business h1 {
     margin-bottom: 25px;
     color: var(--text-color);
+    font-family: var(--title);
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: rgba(255,255,255,0.3) 0 0 10px;
+    text-align: center;
 }
 
 .family-business iframe {
@@ -314,6 +331,7 @@ footer {
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     width: 100%;
     height: auto;
+    padding-top: 50px;
 }
 
 footer form {
@@ -336,9 +354,12 @@ footer form {
 
 footer form h1 {
     text-align: center;
-    text-shadow: #fff 0 0 3px;
+    text-shadow: rgba(255,255,255,0.3) 0 0 10px;
     line-height: 1.3em;
-    
+    font-family: var(--title);
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
 }
 
 footer form div {
@@ -347,13 +368,12 @@ footer form div {
     letter-spacing: 0.1em;
 }
 
-footer form .form.grid-item1, footer form .form.grid-item2 {
-    width: 100%;
-    height: auto;
-}
-
 footer form:active, footer form:hover {
     box-shadow: rgba(0,0,0,0.5) 10px 20px 30px;
+}
+
+footer form .form-item1 input, footer form .form-item1  {
+    font-size: 1.3rem;
 }
 
 footer form .form-item1 input, footer form .form-item2 input {
@@ -366,6 +386,8 @@ footer form .form-item1 input, footer form .form-item2 input {
 footer form .form-item2 input[type="submit"] {
     padding: 10px 15px;
     border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 footer form .form-item2 input[type="submit"]:hover,
@@ -383,13 +405,14 @@ footer .footer-container {
     align-items: flex-start;
     color: var(--text-color);
     padding: 40px 0;
+    font-size: 1.5rem;
 }
 
 footer .footer-container #footer-bar {
     transform: rotate(90deg);
-    width: 150px;
+    width: 300px;
     top: 30%;
-    margin: 90px 0;
+    margin: 170px 0;
     transition: 0.3s ease-in-out;
 }
 
@@ -428,6 +451,10 @@ footer .bottom {
 
     .family-business iframe {
         width: 100%;
+    }
+
+    .intro h1 {
+        line-height: 1em;
     }
 
     footer {
