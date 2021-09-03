@@ -35,3 +35,27 @@ function left() {
 function right() {
     document.galleryImage.src = `images/${gallery[(slideNum >= 1 && slideNum <= images.length - 1) ? --slideNum : slideNum]}`;
 }
+
+// EMAIL SUBMISSION
+// Formspree: code and email proxy
+var form = document.getElementById("form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        status.innerHTML = "Thank you";
+        form.reset()
+    }).catch(error => {
+        status.innerHTML = "There was a problem";
+    });
+}
+
+form.addEventListener("submit", handleSubmit());

@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_pbwXytHrDuewl4Bk9wWMS");
+        })();
+    </script>
     <link rel="stylesheet" href="portfolio.css">
     <title>Portfolio</title>
 </head>
@@ -34,7 +40,7 @@
             <p>
                 I am a student at the University of Washington - Bothell,
                 my intended major is Computer Science and Software Engineering:
-                Information Assurance and Cybersecurity. I'm interested
+                Information Assurance and Cybersecurity. I'm in interested
                 programming, networking, and cybersecurity.
             </p>
         </div>
@@ -93,39 +99,35 @@
     </section>
 
     <footer id="contact">
-        <form>
+        <form action="https://formspree.io/f/mwkaaqpz" method="POST" id="form">
             <div class="form-item1">
                 <h1>Contact</h1>
 
                 <div>
                     <h4>First Name</h4>
-                    <input type="text" name="first-name" required>
+                    <input type="text" name="firstName" id="first-name" required>
                 </div>
 
                 <div>
                     <h4>Last Name</h4>
-                    <input type="text" name="last-name" required>
+                    <input type="text" name="lastName" id="last-name" required>
                 </div>
 
                 <div>
                     <h4>Email</h4>
-                    <input type="email" name="email" required>
-                </div>
-
-                <div>
-                    <h4>Occupation (optional)</h4>
-                    <input type="text" name="occupation">
+                    <input type="email" id="email" name="_replyto" required>
                 </div>
             </div>
 
             <div class="form-item2">
                 <div>
-                    <textarea rows="5" cols="35"></textarea>
+                    <textarea rows="5" cols="35" id="msg" name="message"></textarea>
                 </div>
 
                 <div>
-                    <input type="submit" onclick="">
+                    <input type="submit" onclick="sendEmail()" name="submit" id="submit">
                 </div>
+                <p id="status"></p>
             </div>
         </form>
         <div class="footer-container">
@@ -136,7 +138,8 @@
             </ul>
             <hr id="footer-bar">
             <ul class="links">
-                <li><a href="https://www.linkedin.com/in/kyle-huang-9492811ba/detail/contact-info/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/kyle-huang-9492811ba/detail/contact-info/"
+                        target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/sharquan3" target="_blank">GitHub</a></li>
                 <li><a href="https://tryhackme.com/p/sharquan3" target="_blank">TryHackMe</a></li>
                 <li><a href="https://www.freecodecamp.org/sharquan3" target="_blank">freeCodeCamp</a></li>
