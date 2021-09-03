@@ -18,7 +18,7 @@ nav {
     background: #002b4e;
     width: 100%;
     min-height: 55px;
-    height: 5vw;
+    height: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +61,7 @@ nav .menu a span::after, nav a span::after {
     position: absolute;
     content: '';
     min-width: 75px;
-    height: 55px;
+    height: 100%;
     background: transparent;
     transition: 0.2s ease-in-out;
     inset: 0;
