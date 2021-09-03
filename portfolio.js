@@ -8,12 +8,8 @@ const mobileMenuDisplay = () => {
 
 mobileMenuIcon.addEventListener('click', mobileMenuDisplay());
 
-// $(".fa-bars").click(() => {
-//     document.getElementsById('mobile-menu').classList.toggle("show");
-// });
 
 // GALLERY SECTION
-
 // images from unsplashed.com
 const images = [
     "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
@@ -23,18 +19,23 @@ const images = [
     "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 ];
 
-const galleryImage = document.querySelector('.gallery-img');
-const left = document.querySelector('.prev');
-const right = document.querySelector('.next');
+let imgDiv = document.querySelector('.img-container');
+let galleryImage = document.querySelector('.gallery-img');
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
 let slideNum = 0;
 
 function left() {
-    document.galleryImage.src = `images/${gallery[(slideNum >= 0 && slideNum <= images.length - 2) ? ++slideNum : slideNum]}`;
+
 }
 
 function right() {
-    document.galleryImage.src = `images/${gallery[(slideNum >= 1 && slideNum <= images.length - 1) ? --slideNum : slideNum]}`;
+    
 }
+
+prev.addEventListener('click', left());
+next.addEventListener('click', right());
+
 
 // EMAIL SUBMISSION
 // Formspree: code and email proxy
