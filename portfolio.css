@@ -14,10 +14,6 @@
     --alt: 'Permanent Marker';
 }
 
-body {
-    font-family: 'Indie Flower';
-}
-
 nav {
     background: #002b4e;
     width: 100%;
@@ -267,6 +263,9 @@ nav #mobile-menu a li {
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 15px 15px;
+    font-family: var(--text);
+    letter-spacing: 0.2em;
+    line-height: 3em;
 }
 
 .grid-container > a {
@@ -332,6 +331,7 @@ footer {
     width: 100%;
     height: auto;
     padding-top: 50px;
+    font-family: var(--text);
 }
 
 footer form {
@@ -356,7 +356,7 @@ footer form h1 {
     text-align: center;
     text-shadow: rgba(255,255,255,0.3) 0 0 10px;
     line-height: 1.3em;
-    font-family: var(--title);
+    font-family: var(--title) !important;
     font-weight: 100;
     font-size: 3.5rem;
     letter-spacing: 0.1em;
@@ -388,7 +388,7 @@ footer form .form-item2 input[type="submit"] {
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 200;
-    font-family: var(--alt);
+    font-family: var(--alt) !important;
     letter-spacing: 0.1em;
 }
 
@@ -408,18 +408,24 @@ footer .footer-container {
     color: var(--text-color);
     padding: 40px 0;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 footer .footer-container #footer-bar {
     transform: rotate(90deg);
     width: 300px;
-    top: 30%;
-    margin: 170px -150px;
     transition: 0.3s ease-in-out;
 }
 
 footer ul {
     list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer .contact-info {
