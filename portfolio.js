@@ -34,14 +34,13 @@ const imgDesc = document.querySelector('.img-desc');
 let slideNum = 0;
 
 prev.addEventListener('click', () => {
-    galleryImage.src = ``;
-    // galleryImage.src = `images/${images[(slideNum > 0) ? --slideNum : slideNum = images.length - 1]}`;
+    // galleryImage.src = ``;
+    galleryImage.src = `images/${images[(slideNum > 0) ? --slideNum : slideNum = images.length - 1]}`;
 });
 
 next.addEventListener('click', () => {
-    galleryImage.src = `images/${beta[0] + Object.values(beta[0])[0]}`;
-    alert(galleryImage.src);
-    // galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
+    // galleryImage.src = `images/${beta[0] + Object.values(beta[0])[0]}`;
+    galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
 });
 
 

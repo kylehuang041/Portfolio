@@ -292,13 +292,16 @@ nav #mobile-menu a li {
     border-radius: 20px;
     background:rgba(1, 51, 133, 1);
     color: var(--text-color);
-    min-width: 250px;
-    min-height: 250px;
     margin: 20px;
     box-shadow:  10px 10px 20px rgba(0, 0, 0, 1);
     transition: 0.3s ease-in-out;
     text-decoration: none;
     font-size: 1.3rem;
+    min-width: 275px;
+    min-height: 300px;
+    max-width: 450px;
+    padding: 30px 40px;
+    text-align: center;
 }
 
 .grid-container > *:active, .grid-container > *:hover {
