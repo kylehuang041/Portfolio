@@ -19,22 +19,19 @@ const images = [
     "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 ];
 
-let imgDiv = document.querySelector('.img-container');
 let galleryImage = document.querySelector('.gallery-img');
 let prev = document.querySelector('.prev');
 let next = document.querySelector('.next');
+let imgDesc = document.querySelector('.img-desc');
 let slideNum = 0;
 
-function left() {
+prev.addEventListener('click', () => {
+    galleryImage.src = `images/${images[(slideNum > 0) ? --slideNum : slideNum = images.length - 1]}`;
+});
 
-}
-
-function right() {
-    
-}
-
-prev.addEventListener('click', left());
-next.addEventListener('click', right());
+next.addEventListener('click', () => {
+    galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
+});
 
 
 // EMAIL SUBMISSION
