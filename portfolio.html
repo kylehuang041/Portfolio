@@ -12,10 +12,11 @@
 <body>
     <nav>
         <div class="menu">
-            <a href="#"><span>Intro</span></a>
-            <a href="#"><span>Projects</span></a>
-            <a href="#"><span>Contact</span></a>
-            <a href="#"><span>Contact</span></a>
+            <a href="#about"><span>About</span></a>
+            <a href="#projects"><span>Projects</span></a>
+            <a href="#gallery"><span>Photo Gallery</span></a>
+            <a href="#business"><span>Business Website</span></a>
+            <a href="#contact"><span>Contact</span></a>
         </div>
         <div class="dropdown">
             <i class="fas fa-bars"></i>
@@ -27,7 +28,7 @@
         </div>
     </nav>
 
-    <section class="intro">
+    <section class="intro" id="about">
         <div class="text">
             <h1>Kyle Huang</h1>
             <p>
@@ -40,7 +41,42 @@
         <img src="images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg">
     </section>
 
-    <section class="gallery">
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="grid-container">
+            <a href="https://github.com/sharquan3/RestaurantOrderProgram" target="_blank">
+                <div class="icons"><i class="fab fa-java"></i></div>
+                <h3>Restaurant Order</h3>
+            </a>
+
+            <a href="https://github.com/sharquan3/Tiffany" target="_blank">
+                <div>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>Business Website</h3>
+            </a>
+
+            <a href="https://github.com/sharquan3/WeatherAPI" target="_blank">
+                <div>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <h3>Weather API</h3>
+            </a>
+
+            <a href="https://codepen.io/sharquan3" target="_blank">
+                <div>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>Mini Webpage Projects</h3>
+            </a>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
         <img class="gallery-img" src="images/daniela-cuevas-t7YycgAoVSw-unsplash.jpg">
         <div class="gallery-bar">
             <a class="prev" onclick="left()"><i class="fas fa-angle-left"></i></a>
@@ -49,37 +85,62 @@
         </div>
     </section>
 
-    <section class="grid-container">
-        <h1>Projects</h1>
-        <div class="grid">
-            <a href="#"><div class="grid-item">Restaurant Order</div></a>
-            <a href="#"><div class="grid-item">Business Website</div></a>
-            <a href="#"><div class="grid-item">Weather API</div></a>
-            <a href="#"><div class="grid-item">Mini Webpage Projects</div></a>
-        </div>
-    </section>
-
-    <section class="family-business">
-        <iframe
-            src="https://tiffanylashandspa.github.io/Tiffany" frameborder="0"
-            width="90%" height="500" title="Tiffany Lash and Spa"
-            allowfullscreen>
+    <section class="family-business" id="business">
+        <h1>Family Business Website</h1>
+        <iframe src="https://tiffanylashandspa.github.io/Tiffany" frameborder="0" width="90%" height="500"
+            title="Tiffany Lash and Spa" allowfullscreen>
         </iframe>
     </section>
 
-    <footer>
+    <footer id="contact">
+        <form>
+            <div class="form-item1">
+                <h1>Contact</h1>
+
+                <div>
+                    <h4>First Name</h4>
+                    <input type="text" name="first-name" required>
+                </div>
+
+                <div>
+                    <h4>Last Name</h4>
+                    <input type="text" name="last-name" required>
+                </div>
+
+                <div>
+                    <h4>Email</h4>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div>
+                    <h4>Occupation (optional)</h4>
+                    <input type="text" name="occupation">
+                </div>
+            </div>
+
+            <div class="form-item2">
+                <div>
+                    <textarea rows="5" cols="35"></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" onclick="">
+                </div>
+            </div>
+        </form>
         <div class="footer-container">
-            <ul class="contact">
+            <ul class="contact-info">
                 <li>Kyle Huang</li>
                 <li>sharquan3@gmail.com</li>
                 <li>Seattle, WA</li>
             </ul>
+            <hr id="footer-bar">
             <ul class="links">
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">TryHackMe</a></li>
-                <li><a href="#">freeCodeCamp</a></li>
-                <li><a href="#">Indeed</a></li>
+                <li><a href="https://www.linkedin.com/in/kyle-huang-9492811ba/detail/contact-info/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/sharquan3" target="_blank">GitHub</a></li>
+                <li><a href="https://tryhackme.com/p/sharquan3" target="_blank">TryHackMe</a></li>
+                <li><a href="https://www.freecodecamp.org/sharquan3" target="_blank">freeCodeCamp</a></li>
+                <li><a href="https://my.indeed.com/p/kyleh-r7behmb" target="_blank">Indeed</a></li>
             </ul>
         </div>
         <div class="bottom"></div>
