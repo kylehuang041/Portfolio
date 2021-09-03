@@ -339,6 +339,10 @@ footer {
     height: auto;
     padding-top: 50px;
     font-family: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer form {
@@ -356,7 +360,7 @@ footer form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: calc(800px + 10vw);
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -429,6 +433,7 @@ footer .footer-container {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    max-width: 2000px;
 }
 
 footer .footer-container #footer-bar {

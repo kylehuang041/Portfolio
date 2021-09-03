@@ -19,18 +19,29 @@ const images = [
     "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 ];
 
-let galleryImage = document.querySelector('.gallery-img');
-let prev = document.querySelector('.prev');
-let next = document.querySelector('.next');
-let imgDesc = document.querySelector('.img-desc');
+const beta = {
+    0: "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
+    1: "tim-foster-o4mP43oPGHk-unsplash.jpg",
+    2: "luca-micheli-r9RW20TrQ0Y-unsplash.jpg",
+    3: "kace-rodriguez-p3OzJuT_Dks-unsplash.jpg",
+    4: "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
+};
+
+const galleryImage = document.querySelector('.gallery-img');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const imgDesc = document.querySelector('.img-desc');
 let slideNum = 0;
 
 prev.addEventListener('click', () => {
-    galleryImage.src = `images/${images[(slideNum > 0) ? --slideNum : slideNum = images.length - 1]}`;
+    galleryImage.src = ``;
+    // galleryImage.src = `images/${images[(slideNum > 0) ? --slideNum : slideNum = images.length - 1]}`;
 });
 
 next.addEventListener('click', () => {
-    galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
+    galleryImage.src = `images/${beta[0] + Object.values(beta[0])[0]}`;
+    alert(galleryImage.src);
+    // galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
 });
 
 
