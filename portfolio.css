@@ -414,7 +414,7 @@ footer .footer-container #footer-bar {
     transform: rotate(90deg);
     width: 300px;
     top: 30%;
-    margin: 170px 0;
+    margin: 170px -150px;
     transition: 0.3s ease-in-out;
 }
 
