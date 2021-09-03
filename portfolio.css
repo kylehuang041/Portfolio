@@ -427,6 +427,10 @@ footer form .form-item2 input[type="submit"]:active {
     color: var(--text-color);
 }
 
+footer form .form-item2 #status  {
+    text-align: center;
+}
+
 footer .footer-container {
     width: 100%;
     height: auto;
