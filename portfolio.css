@@ -174,7 +174,7 @@ nav #mobile-menu a li {
 
 .gallery {
     width: 100%;
-    height: calc(375px + 25vw);
+    min-height: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
