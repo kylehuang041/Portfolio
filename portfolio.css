@@ -68,7 +68,8 @@ nav .menu a span::after, nav a span::after {
     z-index: -1;
 }
 
-nav .menu a span:hover::before, nav .menu a span:hover::after {
+nav .menu a span:hover::before, nav .menu a span:hover::after,
+nav .menu a span:active::before, nav .menu a span:active::after {
     inset: 0 0 3px 0;
     background: -webkit-linear-gradient(-45deg, #ff0000, #9900ff);
     background: linear-gradient(-45deg, #ff0000, #9900ff);
@@ -212,7 +213,7 @@ nav #mobile-menu a li {
     transition: 0.3s ease-in-out;
 }
 
-.gallery .gallery-bar:hover {
+.gallery .gallery-bar:hover, .gallery .gallery-bar:active {
     opacity: 1;
 }
 
@@ -228,7 +229,7 @@ nav #mobile-menu a li {
     cursor: pointer;
 }
 
-.gallery .gallery-bar a:hover {
+.gallery .gallery-bar a:hover, .gallery .gallery-bar a:active {
     background: rgb(27, 27, 27);
 }
 

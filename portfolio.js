@@ -43,6 +43,33 @@ next.addEventListener('click', () => {
     galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
 });
 
+// IFRAME SELECT MENU
+const iframeSelect = document.querySelector('#project-list');
+const iframeBtn = document.querySelector('#iframeBtn');
+const iframe = document.querySelector('#iframe');
+const iframeTitle = document.querySelector('#iframeTitle');
+
+const iframeObj = {
+    "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
+    "Website API": "https://sharquan3.github.io/WeatherAPI/"
+}
+
+let length = Object.keys(iframeObj).length;
+
+function changeItem() {
+    console.log("Testing");
+    for (let i = 0; i < length; i++) {
+        let key = Object.keys(iframeObj)[i];
+        let value = Object.values(iframeObj)[i];
+        if (iframeSelect.value === key) {
+            iframe.src = value;
+            iframeTitle.innerHTML = key;
+        }
+    }
+}
+
+iframeBtn.addEventListener('submit', changeItem());
+
 
 // EMAIL SUBMISSION
 // Formspree: code and email API
