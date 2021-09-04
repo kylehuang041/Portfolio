@@ -272,15 +272,18 @@ nav #mobile-menu a li {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 15px 15px;
     font-family: var(--text);
     letter-spacing: 0.2em;
     line-height: 3em;
+    grid-gap: 30px;
 }
 
 .grid-container > a {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: auto;
 }
 
 .grid-container > a > div > .fab {
@@ -323,7 +326,6 @@ nav #mobile-menu a li {
 }
 
 .family-business h1 {
-    margin-bottom: 25px;
     color: var(--text-color);
     font-family: var(--title);
     font-weight: 100;
@@ -335,6 +337,28 @@ nav #mobile-menu a li {
 
 .family-business iframe {
     border-radius: 5px;
+}
+
+.family-business .project-list-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 46px;
+    max-width: 1200px;
+}
+
+.family-business .project-list-container select {
+    text-align: center;
+    padding: 3px 0;
+    width: 65%;
+    max-width: 350px;
+}
+
+.family-business .project-list-container input {
+    padding: 3px 0;
+    width: 20%;
+    max-width: 200px;
 }
 
 footer {
