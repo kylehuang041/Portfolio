@@ -356,7 +356,7 @@ nav #mobile-menu a li {
     max-width: 350px;
 }
 
-.family-business .project-list-container input {
+.family-business .project-list-container button {
     padding: 3px 0;
     width: 20%;
     max-width: 200px;
@@ -469,6 +469,7 @@ footer .footer-container {
 
 footer .footer-container #footer-bar {
     transform: rotate(90deg);
+    min-width: 150px;
     width: 20vw;
     transition: 0.3s ease-in-out;
 }

@@ -61,14 +61,14 @@ function changeItem() {
     for (let i = 0; i < length; i++) {
         let key = Object.keys(iframeObj)[i];
         let value = Object.values(iframeObj)[i];
-        if (iframeSelect.value === key) {
+        if (iframeSelect.value == key) {
             iframe.src = value;
             iframeTitle.innerHTML = key;
         }
     }
 }
 
-iframeBtn.addEventListener('submit', changeItem());
+// iframeBtn.addEventListener('click', changeItem());
 
 
 // EMAIL SUBMISSION
