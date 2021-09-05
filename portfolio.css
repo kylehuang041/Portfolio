@@ -491,6 +491,10 @@ footer .bottom {
         padding: 5px 5px 0 7px;
     }
 
+    nav .menu.show {
+        visibility: visible;
+    }
+
     nav .menu a, nav.menu a span {
         width: 100%;
     }
