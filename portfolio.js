@@ -1,15 +1,37 @@
-// NAV BAR SECTION (incomplete)
+// MOBILE MENU SECTION (in-progress)
 const mobileMenuIcon = document.querySelector('.fa-bars');
-const mobileMenu = document.querySelector('#mobile-menu');
+const menu = document.querySelector('.menu');
 
-const mobileMenuDisplay = () => {
-    mobileMenu.classList.toggle('show');
-}
+// const mobileMenuDisplay = (event) => {
+//     event.target.style.color = "purple";
+//     event.target.classList.toggle('show');
+// }
 
-mobileMenuIcon.addEventListener('click', mobileMenuDisplay());
+// let toggleMenu = false;
+// const mobileMenuToggle = () => {
+    // if (!toggleMenu) {
+    //     menu.style.visibility = 'visible';
+    //     toggleMenu = false;
+    //     return;
+    // } else {
+    //     menu.style.visibility = 'hidden';
+    //     toggleMenu = true;
+    //     return;
+    // }
+    // menu.style.visibility = 'hidden';
+// }
+
+// mobileMenuIcon.addEventListener('click', mobileMenuToggle());
+// mobileMenuIcon.addEventListener('mouseenter', mobileMenuDisplay());
+mobileMenuIcon.addEventListener('click', (e) => {
+    // e.target.style.color = "blue";
+    menu.addEventListener('click', (event) => {
+        event.target.classList.toggle('show')
+    })
+});
 
 
-// GALLERY SECTION (incomplete)
+// GALLERY SECTION
 // images from unsplashed.com
 const images = [
     "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
@@ -19,6 +41,7 @@ const images = [
     "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 ];
 
+/*
 const beta = {
     0: "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
     1: "tim-foster-o4mP43oPGHk-unsplash.jpg",
@@ -26,6 +49,7 @@ const beta = {
     3: "kace-rodriguez-p3OzJuT_Dks-unsplash.jpg",
     4: "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 };
+*/
 
 const galleryImage = document.querySelector('.gallery-img');
 const prev = document.querySelector('.prev');
@@ -43,12 +67,13 @@ next.addEventListener('click', () => {
     galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
 });
 
-// IFRAME SELECT MENU
+// IFRAME SELECT MENU (in-progress)
 const iframeSelect = document.querySelector('#project-list');
 const iframeBtn = document.querySelector('#iframeBtn');
 const iframe = document.querySelector('#iframe');
 const iframeTitle = document.querySelector('#iframeTitle');
 
+/*
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
     "Website API": "https://sharquan3.github.io/WeatherAPI/"
@@ -66,13 +91,15 @@ function changeItem() {
             iframeTitle.innerHTML = key;
         }
     }
+    localStorage.setItem("title", iframeSelect.value);
+    localStorage.setItem("web", iframeObj[iframeSelect.value]);
 }
 
-// iframeBtn.addEventListener('click', changeItem());
-
+iframeBtn.addEventListener('click', changeItem());
+*/
 
 // EMAIL SUBMISSION
-// Formspree: code and email API
+// API code from Formspree
 var form = document.getElementById("form");
 
 async function handleSubmit(event) {
@@ -94,3 +121,9 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit());
+
+// WINDOW LOAD: LOCAL STORAGE
+window.addEventListener('load', () => {
+    iframeTitle.innerHTML = localStorage.getItem("title");
+    iframe.src = localStorage.getItem("web");
+})
