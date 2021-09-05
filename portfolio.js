@@ -2,33 +2,22 @@
 const mobileMenuIcon = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
 
-// const mobileMenuDisplay = (event) => {
-//     event.target.style.color = "purple";
-//     event.target.classList.toggle('show');
-// }
-
-// let toggleMenu = false;
-// const mobileMenuToggle = () => {
-    // if (!toggleMenu) {
-    //     menu.style.visibility = 'visible';
-    //     toggleMenu = false;
-    //     return;
-    // } else {
-    //     menu.style.visibility = 'hidden';
-    //     toggleMenu = true;
-    //     return;
-    // }
-    // menu.style.visibility = 'hidden';
-// }
-
-// mobileMenuIcon.addEventListener('click', mobileMenuToggle());
-// mobileMenuIcon.addEventListener('mouseenter', mobileMenuDisplay());
-mobileMenuIcon.addEventListener('click', (e) => {
-    // e.target.style.color = "blue";
-    menu.addEventListener('click', (event) => {
-        event.target.classList.toggle('show')
-    })
+let toggleMenu = false;
+mobileMenuIcon.addEventListener('click',() => {
+    console.log("Test")
+    if (!toggleMenu) {
+        menu.style.visibility = 'visible';
+        toggleMenu = true;
+        console.log("Test2")
+        return;
+    } else {
+        menu.style.visibility = 'hidden';
+        toggleMenu = false;
+        console.log("Test3")
+        return;
+    }
 });
+// mobileMenuIcon.addEventListener('mouseenter', mobileMenuToggle());
 
 
 // GALLERY SECTION
