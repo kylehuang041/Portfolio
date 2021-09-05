@@ -3,21 +3,30 @@ const mobileMenuIcon = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
 
 let toggleMenu = false;
-mobileMenuIcon.addEventListener('click',() => {
-    console.log("Test")
+mobileMenuIcon.addEventListener('click', () => {
     if (!toggleMenu) {
         menu.style.visibility = 'visible';
         toggleMenu = true;
         console.log("Test2")
-        return;
     } else {
         menu.style.visibility = 'hidden';
         toggleMenu = false;
         console.log("Test3")
-        return;
     }
 });
-// mobileMenuIcon.addEventListener('mouseenter', mobileMenuToggle());
+
+let hover = false;
+mobileMenuIcon.addEventListener('mouseover', () => {
+    // menu.classList.toggle('show')
+    menu.classList.toggle("visible");
+    // if (!hover) {
+    //     menu.style.visibility = 'visible';
+    //     hover = true;
+    // } else {
+    //     menu.style.visibility = 'hidden';
+    //     hover = false;
+    // }
+})
 
 
 // GALLERY SECTION
