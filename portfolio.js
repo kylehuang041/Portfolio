@@ -1,4 +1,4 @@
-// MOBILE MENU SECTION (in-progress)
+// MOBILE MENU SECTION
 const mobileMenuIcon = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
 
@@ -49,7 +49,6 @@ const iframeBtn = document.querySelector('#iframeBtn');
 const iframe = document.querySelector('#iframe');
 const iframeTitle = document.querySelector('#iframeTitle');
 
-/*
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
     "Website API": "https://sharquan3.github.io/WeatherAPI/"
@@ -57,22 +56,22 @@ const iframeObj = {
 
 let length = Object.keys(iframeObj).length;
 
-function changeItem() {
-    console.log("Testing");
+iframeBtn.addEventListener('click', () => {
+    // console.log(iframeSelect.value);
     for (let i = 0; i < length; i++) {
         let key = Object.keys(iframeObj)[i];
         let value = Object.values(iframeObj)[i];
+        // console.log(key + "\n" + value);
         if (iframeSelect.value == key) {
+            console.log("IF BLOCK")
             iframe.src = value;
             iframeTitle.innerHTML = key;
         }
     }
     localStorage.setItem("title", iframeSelect.value);
-    localStorage.setItem("web", iframeObj[iframeSelect.value]);
-}
+    localStorage.setItem("link", iframeObj[iframeSelect.value]);
+});
 
-iframeBtn.addEventListener('click', changeItem());
-*/
 
 // EMAIL SUBMISSION
 // API code from Formspree
@@ -101,5 +100,5 @@ form.addEventListener("submit", handleSubmit());
 // WINDOW LOAD: LOCAL STORAGE
 window.addEventListener('load', () => {
     iframeTitle.innerHTML = localStorage.getItem("title");
-    iframe.src = localStorage.getItem("web");
+    iframe.src = localStorage.getItem("link");
 })
