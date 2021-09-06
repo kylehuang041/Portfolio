@@ -43,6 +43,7 @@ next.addEventListener('click', () => {
     galleryImage.src = `images/${images[(slideNum < images.length - 1) ? ++slideNum : slideNum = 0]}`;
 });
 
+
 // IFRAME SELECT MENU (in-progress)
 const iframeSelect = document.querySelector('#project-list');
 const iframeBtn = document.querySelector('#iframeBtn');
@@ -50,26 +51,35 @@ const iframe = document.querySelector('#iframe');
 const iframeTitle = document.querySelector('#iframeTitle');
 
 const iframeObj = {
-    "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
-    "Website API": "https://sharquan3.github.io/WeatherAPI/"
+    "FamilyBusinessWebsite": "https://tiffanylashandspa.github.io/Tiffany/",
+    "WebsiteAPI": "https://sharquan3.github.io/WeatherAPI/"
 }
 
 let length = Object.keys(iframeObj).length;
+const regex = /(\w)+/gi;
+let inputValue = iframeSelect.value.match(regex).join("");
 
 iframeBtn.addEventListener('click', () => {
-    // console.log(iframeSelect.value);
-    for (let i = 0; i < length; i++) {
-        let key = Object.keys(iframeObj)[i];
-        let value = Object.values(iframeObj)[i];
-        // console.log(key + "\n" + value);
-        if (iframeSelect.value == key) {
-            console.log("IF BLOCK")
-            iframe.src = value;
-            iframeTitle.innerHTML = key;
+    try {
+        for (let i = 0; i < length; i++) {
+            let key = Object.keys(iframeObj)[i];
+            if (inputValue === key) {
+                let name = key.replace(/([a-z])([A-Z])/g, "$1 $2");
+                let value = iframeObj[`${inputValue}`];
+                // let value = Object.keys(iframeObj)[i];
+                console.log(name)
+                console.log(value);
+                iframeTitle.innerHTML = name;
+                iframe.src = value;
+                localStorage.setItem("title", name);
+                localStorage.setItem("link", value);
+                // console.log(localStorage.getItem("title"));
+                // console.log(localStorage.getItem("link"));
+            }
         }
+    } catch (err) {
+        console.log("iframe website Error");
     }
-    localStorage.setItem("title", iframeSelect.value);
-    localStorage.setItem("link", iframeObj[iframeSelect.value]);
 });
 
 
@@ -91,7 +101,7 @@ async function handleSubmit(event) {
         status.innerHTML = "Thank you";
         form.reset()
     }).catch(error => {
-        status.innerHTML = "There was a problem";
+        status.innerHTML = "There was a problem, make sure to enable all scripts";
     });
 }
 

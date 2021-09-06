@@ -518,6 +518,14 @@ footer .bottom {
         line-height: 1em;
     }
 
+    .family-business .project-list-container {
+        flex-direction: column;
+    }
+
+    .family-business .project-list-container select {
+        margin-bottom: 1em;
+    }
+
     footer {
         display: flex;
         justify-content: center;
