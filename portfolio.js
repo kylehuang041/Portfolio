@@ -1,3 +1,9 @@
+/**
+ * Make it responsive, switch images for gallery, change iframe source
+ * (not fixed), make the email contact work.
+ * @author Kyle Huang
+ */
+
 // MOBILE MENU SECTION
 const mobileMenuIcon = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
