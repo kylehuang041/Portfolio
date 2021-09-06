@@ -148,6 +148,7 @@ async function handleSubmit(event) {
 
 form.addEventListener("submit", handleSubmit());
 
+
 /*
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
