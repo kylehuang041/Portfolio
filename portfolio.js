@@ -51,27 +51,32 @@ const iframe = document.querySelector('#iframe');
 const iframeTitle = document.querySelector('#iframeTitle');
 
 const iframeObj = {
-    "FamilyBusinessWebsite": "https://tiffanylashandspa.github.io/Tiffany/",
-    "WebsiteAPI": "https://sharquan3.github.io/WeatherAPI/"
+    "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
+    "Website API": "https://sharquan3.github.io/WeatherAPI/"
 }
 
 let length = Object.keys(iframeObj).length;
-const regex = /(\w)+/gi;
-let inputValue = iframeSelect.value.match(regex).join("");
+// const regex = /(\w)+/gi;
+// let inputValue = iframeSelect.value.match(regex).join("");
 
 iframeBtn.addEventListener('click', () => {
     try {
+        console.log("Running iframe Menu")
+        let inputValue = iframeSelect.value;
         for (let i = 0; i < length; i++) {
             let key = Object.keys(iframeObj)[i];
-            if (inputValue === key) {
-                let name = key.replace(/([a-z])([A-Z])/g, "$1 $2");
-                let value = iframeObj[`${inputValue}`];
+            if (inputValue == key) {
+                console.log("IF BLOCK")
+                // let value = iframeObj[`${inputValue}`];
+                // let name = key.replace(/([a-z])([A-Z])/g, "$1 $2");
                 // let value = Object.keys(iframeObj)[i];
-                console.log(name)
+                // console.log(name)
+                console.log(key);
+                let value = Object.values(iframeObj)[i];
                 console.log(value);
-                iframeTitle.innerHTML = name;
+                iframeTitle.innerHTML = key;
                 iframe.src = value;
-                localStorage.setItem("title", name);
+                localStorage.setItem("title", key);
                 localStorage.setItem("link", value);
                 // console.log(localStorage.getItem("title"));
                 // console.log(localStorage.getItem("link"));
