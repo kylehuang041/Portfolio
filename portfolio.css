@@ -486,6 +486,7 @@ footer .bottom {
 @media (min-width: 768px) {
     .gallery {
         height: 645px;
+        transition: all 0.3s ease-in-out;
     }
 
     .gallery .img-container {
@@ -501,6 +502,7 @@ footer .bottom {
         object-fit: contain;
         padding: 25px 0 50px 0;
         box-shadow: 0 0 20px #000000;
+        transition: all 0.3s ease-in-out;
     }
 
     .gallery:hover, .gallery .gallery-img:hover,

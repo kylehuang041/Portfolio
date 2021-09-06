@@ -72,7 +72,7 @@ const galleryDesc = document.querySelector('#img-desc');
 const galleryLength = Object.keys(galleryDict).length;
 const galleryImgDesc = Object.keys(galleryDict);
 const gallerySrc = Object.values(galleryDict);
-let slideIdx = 0;
+let slideIdx = 0; 
 
 prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx
