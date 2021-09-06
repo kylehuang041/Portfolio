@@ -107,21 +107,18 @@ const iframeObj = {
 
 iframeBtn.addEventListener('click', () => {
     try {
-        console.log("Running iframe Menu")
+        const length = Object.keys(iframeObj).length;
         const inputValue = iframeSelect.value;
         iframe.title = inputValue;
-        let length = Object.keys(iframeObj).length;
 
         for (let i = 0; i < length; i++) {
             let projNames = Object.keys(iframeObj)[i];
             if (inputValue === projNames) {
-                console.log("IF BLOCK")
                 let projLink = Object.values(iframeObj)[i];
                 console.log(projNames);
                 console.log(projLink);
                 iframeHeader.innerHTML = projNames;
                 iframe.src = projLink;
-                iframe.title = projNames;
                 // localStorage.setItem("header", projNames);
                 // localStorage.setItem("link", projLink);
                 // localStorage.setItem("title", projNames);
