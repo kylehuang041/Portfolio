@@ -148,14 +148,7 @@ async function handleSubmit(event) {
 
 form.addEventListener("submit", handleSubmit());
 
-
 /*
-// WINDOW LOAD
-window.addEventListener('load', () => {
-    //
-})
-
-
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
     iframeHeader.innerHTML = localStorage.getItem("header");
