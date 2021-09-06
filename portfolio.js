@@ -35,8 +35,7 @@ let gallerySrc = Object.values(galleryDict);
 let slideIdx = 0;
 
 prevBtn.addEventListener('click', () => {
-    console.log("GALLERY TESTING")
-    galleryImage.src = `images/${galleryImages[(slideIdx > 0) ? --slideIdx : slideIdx = galleryImages.length - 1]}`;
+    galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx : slideIdx = galleryLength - 1]}`;
     let desc = galleryImgDesc[slideIdx];
     let img = gallerySrc[slideIdx];
     console.log(img + "\n" + desc);
@@ -45,7 +44,7 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    galleryImage.src = `images/${galleryImages[(slideIdx < galleryImages.length - 1) ? ++slideIdx : slideIdx = 0]}`;
+    galleryImage.src = `images/${gallerySrc[(slideIdx < galleryLength - 1) ? ++slideIdx : slideIdx = 0]}`;
     let desc = galleryImgDesc[slideIdx];
     let img = gallerySrc[slideIdx];
     console.log(img + "\n" + desc);
