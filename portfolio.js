@@ -56,11 +56,6 @@ const galleryDict = {
     "Snoqualmie (45): Kyle Huang": "7HuangKyleShowcaseOPT0004.jpg",
     "Snoqualmie (46): Kyle Huang": "7HuangKyleShowcaseOPT0005.jpg",
     "Snoqualmie (47): Kyle Huang": "7HuangKyleShowcaseOPT0006.jpg",
-    "Unsplashed.com (48): Daniela Cuevas": "daniela-cuevas-t7YycgAoVSw-unsplash.jpg",
-    "Unsplashed.com (49): Tim Foster": "tim-foster-o4mP43oPGHk-unsplash.jpg",
-    "Unsplashed.com (50): Luca Micheli": "luca-micheli-r9RW20TrQ0Y-unsplash.jpg",
-    "Unsplashed.com (51): Kace Rodriguez": "kace-rodriguez-p3OzJuT_Dks-unsplash.jpg",
-    "Unsplashed.com (52): Sean oulashin": "sean-oulashin-KMn4VEeEPR8-unsplash.jpg"
 };
 
 const galleryImage = document.querySelector('.gallery-img');
