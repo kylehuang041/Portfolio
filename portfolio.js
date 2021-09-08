@@ -105,12 +105,12 @@ iframeBtn.addEventListener('click', () => {
         iframe.title = inputValue;
 
         for (let i = 0; i < length; i++) {
-            let projNames = Object.keys(iframeObj)[i];
-            if (inputValue === projNames) {
+            let projTitle = Object.keys(iframeObj)[i];
+            if (inputValue === projTitle) {
                 let projLink = Object.values(iframeObj)[i];
                 // console.log(projNames);
                 // console.log(projLink);
-                iframeHeader.innerHTML = projNames;
+                iframeHeader.innerHTML = projTitle;
                 iframe.src = projLink;
                 // localStorage.setItem("header", projNames);
                 // localStorage.setItem("link", projLink);
