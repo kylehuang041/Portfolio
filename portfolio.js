@@ -29,7 +29,7 @@ const galleryDict = {
     "Bellevue High School (10): Kyle Huang": "7HuangKyleLeadingLinesOPT0001.jpg",
     "Bellevue High School (11): Kyle Huang": "7HuangKylePatriotismOPT0003.jpg",
     "Bellevue High School (12): Kyle Huang": "7HuangKylePatriotismOPT0006.JPG",
-    "Bellevue High School (13): Kyle Huang": "7HuangKylePerspectiveDL0006.JPG",
+    "Bellevue High School (13): Kyle Huang": "7HuangKylePerspectiveDL0006.jpg",
     "Bellevue High School (14): Kyle Huang": "7HuangKyleRepetition0002.JPG",
     "Bellevue High School (15): Kyle Huang": "7HuangKyleShowcase0016.JPG",
     "Bellevue High School (16): Kyle Huang": "7HuangKyleShowcase0017.JPG",
@@ -65,7 +65,7 @@ const galleryDesc = document.querySelector('#img-desc');
 const galleryLength = Object.keys(galleryDict).length;
 const galleryImgDesc = Object.keys(galleryDict);
 const gallerySrc = Object.values(galleryDict);
-let slideIdx = 0; 
+let slideIdx = 0;
 
 prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx
@@ -141,10 +141,17 @@ async function handleSubmit(event) {
         }
     }).then(response => {
         status.innerHTML = "Thank you";
+        return false;
         form.reset()
     }).catch(error => {
         status.innerHTML = "There was a problem, make sure to enable all scripts";
     });
+}
+
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
 }
 
 form.addEventListener("submit", handleSubmit());
