@@ -90,8 +90,7 @@ nav .menu a span:focus::after {
 }
 
 nav .menu a span:hover,
-nav .menu a span:active,
-nav .menu a span:focus {
+nav .menu a span:active {
     color: rgb(198, 33, 248);
 }
 
