@@ -152,7 +152,9 @@ nav i {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
+    background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg") cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .gallery {
