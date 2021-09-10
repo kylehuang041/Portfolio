@@ -293,9 +293,10 @@ nav i {
 
 .grid-container > *:active,
 .grid-container > *:hover,
-.grid-container > *:active {
+.grid-container > *:focus {
     background: rgba(1, 51, 133, 0.7);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.0125);
 }
 
 .project-display {
