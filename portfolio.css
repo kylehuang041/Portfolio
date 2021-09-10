@@ -304,8 +304,9 @@ nav i {
 .grid-container>*:active,
 .grid-container>*:hover,
 .grid-container>*:focus {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
     transform: scale(1.0125);
+    background: linear-gradient(to right, #eb7724, #ce367f);
 }
 
 .project-display {
@@ -552,6 +553,10 @@ footer .bottom {
     .gallery .gallery-bar:focus {
         box-shadow: 0 0 20px #0e858d;
     }
+
+    footer .footer-container {
+        font-size: 1.6rem;
+    } 
 }
 
 @media (max-width: 700px) {
