@@ -93,6 +93,11 @@ nav .menu a span:hover {
     color: rgb(198, 33, 248);
 }
 
+nav .menu a span:active, nav .menu a span:focus {
+    outline: 0;
+    border: 0;
+}
+
 nav i {
     visibility: hidden;
     color: var(--text-color);
@@ -102,6 +107,8 @@ nav i {
 
 .show {
     visibility: visible;
+    outline: 0;
+    border: 0;
 }
 
 .intro {
