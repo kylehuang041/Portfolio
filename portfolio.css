@@ -94,7 +94,7 @@ nav .menu a span:hover {
 }
 
 nav .menu a span:active, nav .menu a span:focus {
-    outline: 0;
+    outline: none;
     border: 0;
 }
 
@@ -107,8 +107,6 @@ nav i {
 
 .show {
     visibility: visible;
-    outline: 0;
-    border: 0;
 }
 
 .intro {
