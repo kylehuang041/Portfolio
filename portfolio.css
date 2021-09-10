@@ -411,6 +411,7 @@ footer form:active,
 footer form:hover,
 footer form:active {
     box-shadow: rgba(0, 0, 0, 0.5) 10px 20px 30px;
+    transform: scale(1.0125);
 }
 
 footer form .form-item1,
