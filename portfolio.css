@@ -89,8 +89,7 @@ nav .menu a span:focus::after {
     overflow: hidden;
 }
 
-nav .menu a span:hover,
-nav .menu a span:active {
+nav .menu a span:hover {
     color: rgb(198, 33, 248);
 }
 
