@@ -617,6 +617,7 @@ footer .bottom {
 
     .intro {
         background: black;
+        z-index: 2;
     }
 
     .intro .text>h1 {
