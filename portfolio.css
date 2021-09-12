@@ -54,11 +54,6 @@ nav .menu>a {
     border: 0;
 }
 
-nav.menu a::selection {
-    border: 0;
-    outline: none;
-}
-
 nav .menu a span {
     position: absolute;
     width: 100%;
@@ -79,7 +74,7 @@ nav a span::after {
     min-width: 75px;
     height: 55px;
     background: transparent;
-    transition: 0.1s ease-in-out;
+    transition: 0.3s ease-in-out;
     inset: 0;
     z-index: -1;
 }
@@ -100,11 +95,6 @@ nav .menu a span:focus::after {
 
 nav .menu a span:hover {
     color: rgb(198, 33, 248);
-}
-
-nav .menu a span:active, nav .menu a span:focus {
-    outline: none;
-    border: 0;
 }
 
 nav i {
@@ -137,7 +127,7 @@ nav i {
     color: var(--text-color);
     text-shadow: #352fa5 5px 5px 10px;
     font-size: 1.8rem;
-    padding: 60px 25% 40px 25%;
+    padding: 70px 25% 30px 25%;
 }
 
 .intro .text>h1 {
@@ -147,6 +137,10 @@ nav i {
     font-family: var(--title);
     font-weight: 100;
     text-shadow: rgba(255, 255, 255, 0.3) 0 0 10px;
+}
+
+.intro .text p {
+    padding-top: 15px;
 }
 
 .gallery {
@@ -272,11 +266,6 @@ nav i {
     transition: all 0.3s ease-in-out;
     outline: none;
     overflow: hidden;
-}
-
-.grid-container::selection {
-    border: 0;
-    outline: none;
 }
 
 .grid-container a .project-img img {
@@ -512,11 +501,6 @@ footer .links li a:focus {
     color: rgb(198, 33, 248);
 }
 
-footer .links li::selection {
-    border: 0;
-    outline: none;
-}
-
 footer .bottom {
     background: linear-gradient(270deg, rgb(5, 24, 56), #011127);
     width: 100%;
@@ -616,7 +600,7 @@ footer .bottom {
     }
 
     .intro .text {
-        padding: 60px 20px 40px 20px;
+        padding: 60px 40px 40px 40px;
     }
 
     .intro .text>h1 {
