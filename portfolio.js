@@ -7,11 +7,11 @@
 // MOBILE MENU SECTION
 const mobileMenuIcon = document.querySelector('.fa-bars');
 const menu = document.querySelector('.menu');
+// const menuLink = document.querySelectorAll('menu-link');
 
 mobileMenuIcon.addEventListener('click', () => {
     menu.classList.toggle('show')
 });
-
 
 // GALLERY SECTION
 // my images
