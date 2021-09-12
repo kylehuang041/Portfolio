@@ -188,6 +188,7 @@ nav i {
     text-decoration: none;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    text-align: center;
 }
 
 .gallery .gallery-bar a:hover,
@@ -611,6 +612,11 @@ footer .bottom {
         height: 90px;
         font-size: 2rem;
         font-weight: bold;
+    }
+
+    .gallery .gallery-bar .prev,
+    .gallery .gallery-bar .next {
+        height: 90px;
     }
 
     .gallery .gallery-bar:focus,
