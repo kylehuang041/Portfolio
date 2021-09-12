@@ -29,6 +29,7 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 2;
+    transition: all 0.3s ease-in-out;
 }
 
 nav .menu {
@@ -51,6 +52,11 @@ nav .menu>a {
     z-index: 3;
     outline: none;
     border: 0;
+}
+
+nav.menu a::selection {
+    border: 0;
+    outline: none;
 }
 
 nav .menu a span {
@@ -106,6 +112,11 @@ nav i {
     color: var(--text-color);
     margin-right: 15px;
     font-size: 25px;
+}
+
+.nav i::selection {
+    outline: none;
+    border: 0;
 }
 
 .show {
@@ -288,6 +299,11 @@ nav i {
     transition: all 0.3s ease-in-out;
     outline: none;
     overflow: hidden;
+}
+
+.grid-container::selection {
+    border: 0;
+    outline: none;
 }
 
 .grid-container a .project-img img {
@@ -521,6 +537,11 @@ footer .links li a:hover,
 footer .links li a:active,
 footer .links li a:focus {
     color: rgb(198, 33, 248);
+}
+
+footer .links li::selection {
+    border: 0;
+    outline: none;
 }
 
 footer .bottom {
