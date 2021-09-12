@@ -522,6 +522,15 @@ footer .bottom {
         transition: all 0.3s ease-in-out;
     }
 
+    .intro {
+        height: 15vw;
+        max-height: 700px;
+    }
+
+    .intro .text {
+        padding: inherit 30%;
+    }
+
     .gallery .img-container {
         width: auto;
         height: 100%;
@@ -552,7 +561,7 @@ footer .bottom {
 
     footer .footer-container {
         font-size: 1.6rem;
-    } 
+    }
 }
 
 @media (max-width: 700px) {
