@@ -127,7 +127,7 @@ nav i {
     color: var(--text-color);
     text-shadow: #352fa5 5px 5px 10px;
     font-size: 1.8rem;
-    padding: 70px 25% 30px 25%;
+    padding: 10% 25% 10% 25%;
 }
 
 .intro .text>h1 {
@@ -520,15 +520,6 @@ footer .bottom {
     .gallery {
         height: 645px;
         transition: all 0.3s ease-in-out;
-    }
-
-    .intro {
-        height: 15vw;
-        max-height: 700px;
-    }
-
-    .intro .text {
-        padding: inherit 30%;
     }
 
     .gallery .img-container {
