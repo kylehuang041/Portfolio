@@ -638,20 +638,13 @@ footer .bottom {
         color: purple;
     }
 
-    .intro {
-        background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
-    }
-
     .intro img {
         background-image: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
     }
 
     .intro .text>h1 {
         padding-top: 0;
-    }
-
-    .intro h1 {
-        line-height: 1em;
+        line-height: 8.2rem;
     }
 
     .project-display .project-list-container {
