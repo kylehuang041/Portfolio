@@ -1,6 +1,6 @@
 /**
  * Make it responsive, switch images for gallery, change iframe source
- * (not fixed), make the email contact work.
+ * (not fixed), contact email functionality.
  * @author Kyle Huang
  */
 
@@ -161,10 +161,12 @@ window.onbeforeunload = () => {
 
 form.addEventListener("submit", handleSubmit());
 
+/*
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
-    // iframeHeader.innerHTML = localStorage.getItem("header");
-    // iframe.src = localStorage.getItem("link");
-    // iframe.title = localStorage.getItem("title");
+    iframeHeader.innerHTML = localStorage.getItem("header");
+    iframe.src = localStorage.getItem("link");
+    iframe.title = localStorage.getItem("title");
     iframeSelect.value = "Weather API";
 })
+*/

@@ -672,7 +672,7 @@ footer .bottom {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 450px) {
     .gallery .img-container img {
         object-fit: contain;
         background-position: contain;
@@ -682,6 +682,5 @@ footer .bottom {
         background: -moz-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-        
     }
 }
