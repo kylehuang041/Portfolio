@@ -147,6 +147,11 @@ nav i {
     flex-direction: column;
 }
 
+.gallery .img-container {
+    width: 100%;
+    height: 100%;
+}
+
 .gallery .img-container>img {
     object-fit: cover;
     height: 100%;
@@ -663,5 +668,19 @@ footer .bottom {
     footer .bottom {
         clear: both;
         bottom: 0;
+    }
+}
+
+@media (max-width: 410px) {
+    .gallery .img-container img {
+        object-fit: contain;
+        background-position: contain;
+        width: 100%;
+        height: 100%;
+        background: #CC95C0;
+        background: -moz-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+        background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+        background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+        
     }
 }
