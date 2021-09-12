@@ -589,7 +589,6 @@ footer .bottom {
         background: #0f0c29;
         background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
         background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-        z-index: 2;
         padding: 5px 5px 0 5px;
     }
 
@@ -613,10 +612,6 @@ footer .bottom {
     nav i:active,
     nav i:focus {
         color: purple;
-    }
-
-    .intro {
-        z-index: 1;
     }
 
     .intro .text>h1 {
