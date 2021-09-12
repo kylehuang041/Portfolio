@@ -87,6 +87,7 @@ nav .menu a span:active::after,
 nav .menu a span:focus::before,
 nav .menu a span:focus::after {
     inset: 0 0 3px 0;
+    background: -o-linear-gradient(-45deg, #ff0000, #9900ff);
     background: -moz-linear-gradient(-45deg, #ff0000, #9900ff);
     background: -webkit-linear-gradient(-45deg, #ff0000, #9900ff);
     background: linear-gradient(-45deg, #ff0000, #9900ff);
@@ -153,6 +154,7 @@ nav i {
     width: 100%;
     height: 100%;
     background: #159957;
+    background: -o-linear-gradient(to right, #155799, #159957);
     background: -moz-linear-gradient(to right, #155799, #159957);
     background: -webkit-linear-gradient(to right, #155799, #159957);
     background: linear-gradient(to right, #155799, #159957);
@@ -191,6 +193,7 @@ nav i {
 .gallery .gallery-bar:active,
 .gallery .gallery-bar:focus {
     background: #159957;
+    background: -o-linear-gradient(to right, #155799, #159957);
     background: -moz-linear-gradient(to right, #155799, #159957);
     background: -webkit-linear-gradient(to right, #155799, #159957);
     background: linear-gradient(to right, #155799, #159957);
@@ -243,6 +246,7 @@ nav i {
 
 .projects {
     background: #ee0979;
+    background: -o-linear-gradient(to right, #ff6a00, #ee0979);
     background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
     background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
     background: linear-gradient(to right, #ff6a00, #ee0979);
@@ -322,6 +326,10 @@ nav i {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
     transform: scale(1.0125);
     background: linear-gradient(to right, #eb7724, #ce367f);
+    background: -o-linear-gradient(to right, #eb7724, #ce367f);
+    background: -moz-linear-gradient(to right, #eb7724, #ce367f);
+    background: -webkit-linear-gradient(to right, #eb7724, #ce367f);
+
 }
 
 .project-display {
@@ -378,6 +386,7 @@ nav i {
 
 footer {
     background: #0F2027;
+    background: -o-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: -moz-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
@@ -475,7 +484,7 @@ footer form .form-item2 #status {
 
 footer .footer-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -486,14 +495,24 @@ footer .footer-container {
     display: flex;
     align-items: center;
     max-width: 2000px;
+    letter-spacing: 0.2rem;
 }
 
 footer .footer-container #footer-bar {
     transform: rotate(90deg);
     min-width: 250px;
     max-width: 260px;
-    width: 20vw;
     transition: 0.3s ease-in-out;
+    height: 3px;
+    background: #0f0c29;
+    background: -o-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
+    background: -moz-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
+    background: -webkit-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
+    background: linear-gradient(to right, #ffe033, #cec109, #dbdd52);
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    opacity: 0.5;
 }
 
 footer ul {
@@ -578,6 +597,8 @@ footer .bottom {
         height: auto;
         top: 55px;
         background: #0f0c29;
+        background: -o-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        background: -moz-linear-gradient(to right, #24243e, #302b63, #0f0c29);
         background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
         background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
         padding: 5px 5px 0 5px;
@@ -678,6 +699,7 @@ footer .bottom {
         width: 100%;
         height: 100%;
         background: #CC95C0;
+        background: -o-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: -moz-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
