@@ -69,7 +69,7 @@ nav .menu a span {
 }
 
 nav .menu a span::before,
-nav a span::after {
+nav .menu a span::after {
     position: absolute;
     content: '';
     min-width: 75px;
