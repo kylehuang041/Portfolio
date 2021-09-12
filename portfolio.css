@@ -85,6 +85,7 @@ nav .menu a span:active::after,
 nav .menu a span:focus::before,
 nav .menu a span:focus::after {
     inset: 0 0 3px 0;
+    background: -moz-linear-gradient(-45deg, #ff0000, #9900ff);
     background: -webkit-linear-gradient(-45deg, #ff0000, #9900ff);
     background: linear-gradient(-45deg, #ff0000, #9900ff);
     height: 55px;
@@ -243,6 +244,7 @@ nav i {
 
 .projects {
     background: #ee0979;
+    background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
     background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
     background: linear-gradient(to right, #ff6a00, #ee0979);
     width: 100%;
@@ -377,6 +379,7 @@ nav i {
 
 footer {
     background: #0F2027;
+    background: -moz-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     width: 100%;
