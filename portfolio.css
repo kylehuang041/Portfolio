@@ -609,14 +609,14 @@ footer .bottom {
 
     .gallery .gallery-bar {
         height: 90px;
+        font-size: 2.2rem;
+        font-weight: bold;
     }
 
     .gallery .gallery-bar:focus,
     .gallery .gallery-bar:active,
     .gallery .gallery-bar:hover {
         opacity: 1;
-        font-size: 2.2rem;
-        font-weight: bold;
     }
 
     .gallery .gallery-bar {
