@@ -104,10 +104,6 @@ nav i {
     font-size: 25px;
 }
 
-.show {
-    visibility: visible;
-}
-
 .intro {
     background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
     background-position: center center;
@@ -207,7 +203,6 @@ nav i {
 
 .gallery .gallery-bar * {
     color: var(--text-color);
-    ;
 }
 
 .gallery .gallery-bar .prev {
@@ -610,6 +605,23 @@ footer .bottom {
 
     .project-display .project-list-container select {
         margin-bottom: 1em;
+    }
+
+    .gallery .gallery-bar {
+        height: 90px;
+    }
+
+    .gallery .gallery-bar:focus,
+    .gallery .gallery-bar:active,
+    .gallery .gallery-bar:hover {
+        opacity: 1;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    .gallery .gallery-bar {
+        font-size: 20px;
+        font-weight: bold;
     }
 
     footer {
