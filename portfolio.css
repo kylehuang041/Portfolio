@@ -614,6 +614,10 @@ footer .bottom {
         color: purple;
     }
 
+    .intro {
+        background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
+    }
+
     .intro img {
         background-image: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
     }
