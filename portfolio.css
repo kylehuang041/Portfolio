@@ -645,6 +645,7 @@ footer .bottom {
 
     footer .footer-container {
         width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -654,7 +655,7 @@ footer .bottom {
     footer .footer-container #footer-bar {
         transform: rotate(180deg);
         margin: 20px 0;
-        width: 80%;
+        width: 100%;
     }
 
     footer .footer-container ul {
