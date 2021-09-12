@@ -3,7 +3,7 @@
  * @author Kyle Huang
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Teko&display=swap&family=Oswald&display=swap');
 
 * {
     margin: 0;
@@ -17,13 +17,14 @@
     --text: 'Indie Flower';
     --title: 'Teko';
     --alt: 'Permanent Marker';
+    --alt2: "Oswald";
 }
 
 nav {
     background: #002b4e;
     width: 100%;
-    min-height: 55px;
-    height: 55px;
+    min-height: 60px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,9 +49,10 @@ nav .menu>a {
     color: var(--text-color);
     min-width: 75px;
     width: 10vw;
-    height: 55px;
+    height: 65px;
     z-index: 3;
-    font-family: "Sans-serif";
+    font-family: var(--alt2);
+    letter-spacing: 0.05rem;
 }
 
 nav .menu a span {
@@ -60,18 +62,18 @@ nav .menu a span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
     background: #002b4e;
     font-size: 1.2rem;
     text-align: center;
 }
 
-nav .menu a span::after,
+nav .menu a span::before,
 nav a span::after {
     position: absolute;
     content: '';
     min-width: 75px;
-    height: 55px;
+    height: 65px;
     background: transparent;
     transition: 0.3s ease-in-out;
     inset: 0;
@@ -88,7 +90,7 @@ nav .menu a span:focus::after {
     background: -moz-linear-gradient(-45deg, #ff0000, #9900ff);
     background: -webkit-linear-gradient(-45deg, #ff0000, #9900ff);
     background: linear-gradient(-45deg, #ff0000, #9900ff);
-    height: 55px;
+    height: 65px;
     overflow: hidden;
 }
 
