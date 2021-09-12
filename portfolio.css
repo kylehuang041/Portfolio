@@ -646,6 +646,10 @@ footer .bottom {
         padding-top: 0;
     }
 
+    .intro {
+        background: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
+    }
+
     .intro h1 {
         line-height: 1em;
     }
