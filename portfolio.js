@@ -10,8 +10,9 @@ const menu = document.querySelector('.menu');
 // const menuLink = document.querySelectorAll('menu-link');
 
 mobileMenuIcon.addEventListener('click', () => {
-    menu.classList.toggle('show')
+    menu.classList.toggle('show');
 });
+
 
 // GALLERY SECTION
 // my images
@@ -97,33 +98,43 @@ const iframeSelect = document.querySelector('#project-list');
 const iframeBtn = document.querySelector('#iframeBtn');
 const iframe = document.querySelector('#iframe');
 const iframeHeader = document.querySelector('#iframeHeader');
+let inputVal = iframeSelect.value;
 
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
     "Website API": "https://sharquan3.github.io/WeatherAPI/"
 }
 
-iframeBtn.addEventListener('click', () => {
+iframeBtn.addEventListener('click', (inputVal, iframeObj, memo = {}) => {
     try {
-        const length = Object.keys(iframeObj).length;
-        const inputValue = iframeSelect.value;
-        iframe.title = inputValue;
-
-        for (let i = 0; i < length; i++) {
-            let projTitle = Object.keys(iframeObj)[i];
-            if (inputValue === projTitle) {
-                let projLink = Object.values(iframeObj)[i];
-                // console.log(projNames);
-                // console.log(projLink);
-                iframeHeader.innerHTML = projTitle;
-                iframe.src = projLink;
-                // localStorage.setItem("header", projNames);
-                // localStorage.setItem("link", projLink);
-                // localStorage.setItem("title", projNames);
-                // console.log(localStorage.getItem("title"));
-                // console.log(localStorage.getItem("link"));
+        // if (inputVal in memo) return iframe[`${inputVal}`];
+        for (let property of iframeObj) {
+            if (iframeObj.hasOwnProperty(inputVal)) {
+                iframe.title = inputVal;
+                iframeHeader.innerHTML = inputVal;
+                iframeSelect.value = inputVal;
+                iframe.src = `${iframeObj[property]}`;
             }
         }
+        // const length = Object.keys(iframeObj).length;
+        // const inputValue = iframeSelect.value;
+        // iframe.title = inputValue;
+
+        // for (let i = 0; i < length; i++) {
+        //     let projTitle = Object.keys(iframeObj)[i];
+        //     if (inputValue == projTitle) {
+        //         let projLink = Object.values(iframeObj)[i];
+        //         console.log(projNames);
+        //         console.log(projLink);
+        //         iframeHeader.innerHTML = projTitle;
+        //         iframe.src = projLink;
+        //         // localStorage.setItem("header", projNames);
+        //         // localStorage.setItem("link", projLink);
+        //         // localStorage.setItem("title", projNames);
+        //         // console.log(localStorage.getItem("title"));
+        //         // console.log(localStorage.getItem("link"));
+        //     }
+        // }
     } catch (err) {
         console.log("iframe website Error");
     }
