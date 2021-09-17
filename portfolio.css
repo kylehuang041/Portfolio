@@ -639,10 +639,8 @@ footer .bottom {
 
     .intro {
         background-image: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
+
         background-size: cover;
-        z-index: 2;
     }
 
     .intro .text {
