@@ -162,7 +162,7 @@ nav i {
 .gallery .img-container {
     width: 100%;
     height: 100%;
-    background: #159957;
+    /* background: #159957; */
     background: -o-linear-gradient(to right, #155799, #159957);
     background: -moz-linear-gradient(to right, #155799, #159957);
     background: -webkit-linear-gradient(to right, #155799, #159957);
@@ -181,7 +181,6 @@ nav i {
 .gallery .gallery-bar {
     background: rgba(0, 0, 0, 0.3);
     bottom: 0;
-
     position: absolute;
     width: 100%;
     height: 50px;
@@ -201,7 +200,7 @@ nav i {
 .gallery .gallery-bar:hover,
 .gallery .gallery-bar:active,
 .gallery .gallery-bar:focus {
-    background: #159957;
+    /* background: #159957; */
     background: -o-linear-gradient(to right, #155799, #159957);
     background: -moz-linear-gradient(to right, #155799, #159957);
     background: -webkit-linear-gradient(to right, #155799, #159957);
@@ -254,7 +253,7 @@ nav i {
 }
 
 .projects {
-    background: #ee0979;
+    /* background: #ee0979; */
     background: -o-linear-gradient(to right, #ff6a00, #ee0979);
     background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
     background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
@@ -394,7 +393,7 @@ nav i {
 }
 
 footer {
-    background: #0F2027;
+    /* background: #0F2027; */
     background: -o-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: -moz-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
@@ -513,7 +512,7 @@ footer .footer-container #footer-bar {
     max-width: 260px;
     transition: 0.3s ease-in-out;
     height: 3px;
-    background: #0f0c29;
+    /* background: #0f0c29; */
     background: -o-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
     background: -moz-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
     background: -webkit-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
@@ -552,6 +551,9 @@ footer .links li a:focus {
 
 footer .bottom {
     background: linear-gradient(270deg, rgb(5, 24, 56), #011127);
+    background: -webkit-linear-gradient(270deg, rgb(5, 24, 56), #011127);
+    background: -moz-linear-gradient(270deg, rgb(5, 24, 56), #011127);
+    background: -o-linear-gradient(270deg, rgb(5, 24, 56), #011127);
     width: 100%;
     min-height: 50px;
     height: 2vw;
@@ -605,7 +607,7 @@ footer .bottom {
         width: 100%;
         height: auto;
         top: 55px;
-        background: #0f0c29;
+        /* background: #0f0c29; */
         background: -o-linear-gradient(to right, #24243e, #302b63, #0f0c29);
         background: -moz-linear-gradient(to right, #24243e, #302b63, #0f0c29);
         background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -707,7 +709,7 @@ footer .bottom {
         background-position: contain;
         width: 100%;
         height: 100%;
-        background: #CC95C0;
+        /* background: #CC95C0; */
         background: -o-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: -moz-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
         background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
