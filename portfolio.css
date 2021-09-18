@@ -637,12 +637,6 @@ footer .bottom {
         color: purple;
     }
 
-    .intro {
-        background-image: url("images/ruvim-noga-o0R4iqk1eRQ-unsplash.jpg");
-
-        background-size: cover;
-    }
-
     .intro .text {
         padding: 60px 40px 40px 40px;
     }
