@@ -1,5 +1,5 @@
 # Portfolio
 My Portfolio
 
-Problems with samsung internet and duckduckgo browser: background color/image<br>
+bugs: some browsers have different background colors and mobile background color<br>
 Make sure to unblock any javascript and the website. Otherwise, it won't work.
