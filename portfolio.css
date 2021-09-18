@@ -493,6 +493,7 @@ footer form .form-item2 textarea {
     border: none;
     outline: none;
     padding: 1px 2px;
+    resize: none;
 }
 
 footer form .form-item2 input[type="submit"] {
