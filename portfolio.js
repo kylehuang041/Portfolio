@@ -76,9 +76,9 @@ let slideIdx = 0;
 prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx
         : slideIdx = galleryLength - 1]}`;
+    // const img = gallerySrc[slideIdx];
+    // console.log(img + "\n" + desc);
     const desc = galleryImgDesc[slideIdx];
-    const img = gallerySrc[slideIdx];
-    console.log(img + "\n" + desc);
     galleryDesc.innerHTML = desc;
 });
 
@@ -86,9 +86,9 @@ nextBtn.addEventListener('click', () => {
     // console.log("Length: " + galleryLength);
     galleryImage.src = `images/${gallerySrc[(slideIdx < galleryLength - 1)
         ? ++slideIdx : slideIdx = 0]}`;
+    // const img = gallerySrc[slideIdx];
+    // console.log(img + "\n" + desc);
     const desc = galleryImgDesc[slideIdx];
-    const img = gallerySrc[slideIdx];
-    console.log(img + "\n" + desc);
     galleryDesc.innerHTML = desc;
 });
 
@@ -105,39 +105,27 @@ const iframeObj = {
     "Website API": "https://sharquan3.github.io/WeatherAPI/"
 }
 
-iframeBtn.addEventListener('click', (inputVal, iframeObj, memo = {}) => {
-    try {
-        // if (inputVal in memo) return iframe[`${inputVal}`];
-        for (let property of iframeObj) {
-            if (iframeObj.hasOwnProperty(inputVal)) {
-                iframe.title = inputVal;
-                iframeHeader.innerHTML = inputVal;
-                iframeSelect.value = inputVal;
-                iframe.src = `${iframeObj[property]}`;
+iframeBtn.addEventListener('click', () => {
+        const length = Object.keys(iframeObj).length;
+        const inputValue = iframeSelect.value;
+        iframe.title = inputValue;
+
+        for (let i = 0; i < length; i++) {
+            let projTitle = Object.keys(iframeObj)[i];
+            if (inputValue == projTitle) {
+                let projLink = Object.values(iframeObj)[i];
+                console.log(projTitle);
+                console.log(projLink);
+                iframeHeader.innerHTML = `${projTitle}`;
+                iframe.src = `${projLink}`;
+                // localStorage.setItem("header", projNames);
+                // localStorage.setItem("link", projLink);
+                // localStorage.setItem("title", projNames);
+                // console.log(localStorage.getItem("title"));
+                // console.log(localStorage.getItem("link"));
             }
         }
-        // const length = Object.keys(iframeObj).length;
-        // const inputValue = iframeSelect.value;
-        // iframe.title = inputValue;
 
-        // for (let i = 0; i < length; i++) {
-        //     let projTitle = Object.keys(iframeObj)[i];
-        //     if (inputValue == projTitle) {
-        //         let projLink = Object.values(iframeObj)[i];
-        //         console.log(projNames);
-        //         console.log(projLink);
-        //         iframeHeader.innerHTML = projTitle;
-        //         iframe.src = projLink;
-        //         // localStorage.setItem("header", projNames);
-        //         // localStorage.setItem("link", projLink);
-        //         // localStorage.setItem("title", projNames);
-        //         // console.log(localStorage.getItem("title"));
-        //         // console.log(localStorage.getItem("link"));
-        //     }
-        // }
-    } catch (err) {
-        console.log("iframe website Error");
-    }
 });
 
 
@@ -157,7 +145,6 @@ async function handleSubmit(event) {
         }
     }).then(response => {
         status.innerHTML = "Thank you";
-        return false;
         form.reset()
     }).catch(error => {
         status.innerHTML = "There was a problem, make sure to enable all scripts";
