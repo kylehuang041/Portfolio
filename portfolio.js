@@ -14,6 +14,14 @@ mobileMenuIcon.addEventListener('click', () => {
 });
 
 
+// NAV SCROLL CONTROL
+// const nav = document.getElementsByTagName('nav');
+
+// window.onscroll = function () {
+//     nav.style.position = 'fixed';
+// }
+
+
 // GALLERY SECTION
 // my images
 const galleryDict = {
@@ -103,18 +111,29 @@ iframeBtn.addEventListener('click', () => {
     const length = Object.keys(iframeObj).length;
     const inputValue = iframeSelect.value;
     iframe.title = inputValue;
+    iframe.src = binarySearch(iframeObj, inputValue);
+});
 
-    for (let i = 0; i < length; i++) {
-        let projTitle = Object.keys(iframeObj)[i];
-        if (projTitle === inputValue) {
-            let projLink = Object.values(iframeObj)[i];
-            iframeHeader.innerHTML = `${projTitle}`;
-            iframe.src = projLink;
-            localStorage.setItem("title", projTitle);
-            localStorage.setItem("link", projLink);
+function binarySearch(obj, target) {
+    let low = 0, high = Object.keys(obj).length - 1;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+
+        if (compare(Object.keys(obj)[mid], target) > 0) {
+            high = mid - 1;
+        } else if (compare(Object.keys(obj)[mid], target) < 0) {
+            low = mid + 1;
+        } else {
+            return Object.values(obj)[mid];
         }
     }
-});
+}
+
+const compare = function(string1, string2) {
+    return string1 < string2 ? -1
+        : string1 > string2 ? 1 : 0;
+}
 
 
 // EMAIL SUBMISSION
