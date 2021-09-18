@@ -92,7 +92,6 @@ const iframeSelect = document.querySelector('#project-list');
 const iframeBtn = document.querySelector('#iframeBtn');
 const iframe = document.querySelector('#iframe');
 const iframeHeader = document.querySelector('#iframeHeader');
-let inputValue = iframeSelect.value;
 
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
@@ -100,6 +99,7 @@ const iframeObj = {
 }
 
 iframeBtn.addEventListener('click', () => {
+    let inputValue = iframeSelect.value;
     iframe.title = inputValue;
     iframeHeader.innerHTML = inputValue;
     iframe.src = binarySearch(iframeObj, inputValue);
@@ -164,7 +164,7 @@ form.addEventListener("submit", handleSubmit());
 
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
-    // window.location.hash = "top";
+    window.location.hash = "top";
     if (localStorage.getItem("title") !== null
         || localStorage.getItem("link") !== null) {
         iframeHeader.innerHTML = localStorage.getItem("title");
