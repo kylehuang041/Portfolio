@@ -116,7 +116,11 @@ function binarySearch(obj, target) {
         } else if (compare(Object.keys(obj)[mid], target) < 0) {
             low = mid + 1;
         } else {
-            return Object.values(obj)[mid];
+            let title = Object.keys(obj)[mid];
+            let link = Object.values(obj)[mid];
+            localStorage.setItem("title", title);
+            localStorage.setItem("link", link);
+            return link;
         }
     }
 }
