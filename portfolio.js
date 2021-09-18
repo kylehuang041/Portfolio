@@ -160,6 +160,7 @@ form.addEventListener("submit", handleSubmit());
 
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
+    window.location.hash = "top";
     iframeHeader.innerHTML = localStorage.getItem("title");
     iframe.src = localStorage.getItem("link");
     iframe.title = localStorage.getItem("title");
