@@ -121,7 +121,7 @@ function binarySearch(obj, target) {
     }
 }
 
-const compare = function(string1, string2) {
+const compare = function (string1, string2) {
     return string1 < string2 ? -1
         : string1 > string2 ? 1 : 0;
 }
@@ -161,8 +161,16 @@ form.addEventListener("submit", handleSubmit());
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
     window.location.hash = "top";
-    iframeHeader.innerHTML = localStorage.getItem("title");
-    iframe.src = localStorage.getItem("link");
-    iframe.title = localStorage.getItem("title");
-    iframeSelect.value = localStorage.getItem("title");
+    if (localStorage.getItem("title") !== null
+        || localStorage.getItem("link") !== null) {
+        iframeHeader.innerHTML = localStorage.getItem("title");
+        iframe.src = localStorage.getItem("link");
+        iframe.title = localStorage.getItem("title");
+        iframeSelect.value = localStorage.getItem("title");
+    } else {
+        iframeHeader.innerHTML = Object.keys(iframeObj)[0];
+        iframe.src = Object.values(iframeObj)[0];
+        iframe.title = Object.keys(iframeObj)[0];
+        iframeSelect.value = Object.keys(iframeObj)[0];
+    }
 })
