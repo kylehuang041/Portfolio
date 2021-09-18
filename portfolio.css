@@ -150,6 +150,27 @@ nav i {
     padding-top: 15px;
 }
 
+.projects {
+    /* background: #ee0979; */
+    background: -o-linear-gradient(to right, #ff6a00, #ee0979);
+    background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.projects h1 {
+    color: var(--text-color);
+    font-family: var(--title);
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: rgba(255, 255, 255, 0.3) 0 0 10px;
+    text-align: center;
+}
+
 .gallery {
     width: 100%;
     height: 100%;
@@ -250,27 +271,6 @@ nav i {
 .gallery .gallery-bar .gallery-img {
     box-shadow: 0 0 20px #000000;
     transition: all 0.3s ease-in-out;
-}
-
-.projects {
-    /* background: #ee0979; */
-    background: -o-linear-gradient(to right, #ff6a00, #ee0979);
-    background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
-    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-}
-
-.projects h1 {
-    color: var(--text-color);
-    font-family: var(--title);
-    font-weight: 100;
-    font-size: 3.5rem;
-    letter-spacing: 0.1em;
-    text-shadow: rgba(255, 255, 255, 0.3) 0 0 10px;
-    text-align: center;
 }
 
 .grid-container {

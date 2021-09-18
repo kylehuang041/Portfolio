@@ -16,7 +16,6 @@ mobileMenuIcon.addEventListener('click', () => {
 
 // GALLERY SECTION
 // my images
-// other images from unsplashed.com
 const galleryDict = {
     "Bellevue (1): Kyle Huang": "7HuangKyleCHOICEdl0012.JPG",
     "Bellevue (2): Kyle Huang": "7HuangKyleCHOICEdl0013.JPG",
@@ -76,18 +75,13 @@ let slideIdx = 0;
 prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx
         : slideIdx = galleryLength - 1]}`;
-    // const img = gallerySrc[slideIdx];
-    // console.log(img + "\n" + desc);
     const desc = galleryImgDesc[slideIdx];
     galleryDesc.innerHTML = desc;
 });
 
 nextBtn.addEventListener('click', () => {
-    // console.log("Length: " + galleryLength);
     galleryImage.src = `images/${gallerySrc[(slideIdx < galleryLength - 1)
         ? ++slideIdx : slideIdx = 0]}`;
-    // const img = gallerySrc[slideIdx];
-    // console.log(img + "\n" + desc);
     const desc = galleryImgDesc[slideIdx];
     galleryDesc.innerHTML = desc;
 });
@@ -109,7 +103,6 @@ iframeBtn.addEventListener('click', () => {
     const length = Object.keys(iframeObj).length;
     const inputValue = iframeSelect.value;
     iframe.title = inputValue;
-    console.log("inputVal: " + inputValue);
 
     for (let i = 0; i < length; i++) {
         let projTitle = Object.keys(iframeObj)[i];
@@ -117,11 +110,8 @@ iframeBtn.addEventListener('click', () => {
             let projLink = Object.values(iframeObj)[i];
             iframeHeader.innerHTML = `${projTitle}`;
             iframe.src = projLink;
-            // localStorage.setItem("header", projNames);
-            // localStorage.setItem("link", projLink);
-            // localStorage.setItem("title", projNames);
-            // console.log(localStorage.getItem("title"));
-            // console.log(localStorage.getItem("link"));
+            localStorage.setItem("title", projTitle);
+            localStorage.setItem("link", projLink);
         }
     }
 });
@@ -157,12 +147,11 @@ window.onbeforeunload = () => {
 
 form.addEventListener("submit", handleSubmit());
 
-/*
+
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
-    iframeHeader.innerHTML = localStorage.getItem("header");
+    iframeHeader.innerHTML = localStorage.getItem("title");
     iframe.src = localStorage.getItem("link");
     iframe.title = localStorage.getItem("title");
-    iframeSelect.value = "Weather API";
+    iframeSelect.value = localStorage.getItem("title");
 })
-*/
