@@ -101,7 +101,9 @@ const iframeObj = {
 
 iframeBtn.addEventListener('click', () => {
     const inputValue = iframeSelect.value;
+    iframeSelect.value = inputValue;
     iframe.title = inputValue;
+    iframeHeader.innerHTML = inputVal;
     iframe.src = binarySearch(iframeObj, inputValue);
 });
 
@@ -164,7 +166,7 @@ form.addEventListener("submit", handleSubmit());
 
 // DOMContentLoaded: LOCAL STORAGE
 document.addEventListener("DOMContentLoaded", () => {
-    window.location.hash = "top";
+    // window.location.hash = "top";
     if (localStorage.getItem("title") !== null
         || localStorage.getItem("link") !== null) {
         iframeHeader.innerHTML = localStorage.getItem("title");
