@@ -92,7 +92,7 @@ const iframeSelect = document.querySelector('#project-list');
 const iframeBtn = document.querySelector('#iframeBtn');
 const iframe = document.querySelector('#iframe');
 const iframeHeader = document.querySelector('#iframeHeader');
-let inputVal = iframeSelect.value;
+let inputValue = iframeSelect.value;
 
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
@@ -100,10 +100,8 @@ const iframeObj = {
 }
 
 iframeBtn.addEventListener('click', () => {
-    const inputValue = iframeSelect.value;
-    iframeSelect.value = inputValue;
     iframe.title = inputValue;
-    iframeHeader.innerHTML = inputVal;
+    iframeHeader.innerHTML = inputValue;
     iframe.src = binarySearch(iframeObj, inputValue);
 });
 
