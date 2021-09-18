@@ -102,30 +102,28 @@ let inputVal = iframeSelect.value;
 
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
-    "Website API": "https://sharquan3.github.io/WeatherAPI/"
+    "Weather API": "https://sharquan3.github.io/WeatherAPI/"
 }
 
 iframeBtn.addEventListener('click', () => {
-        const length = Object.keys(iframeObj).length;
-        const inputValue = iframeSelect.value;
-        iframe.title = inputValue;
+    const length = Object.keys(iframeObj).length;
+    const inputValue = iframeSelect.value;
+    iframe.title = inputValue;
+    console.log("inputVal: " + inputValue);
 
-        for (let i = 0; i < length; i++) {
-            let projTitle = Object.keys(iframeObj)[i];
-            if (inputValue == projTitle) {
-                let projLink = Object.values(iframeObj)[i];
-                console.log(projTitle);
-                console.log(projLink);
-                iframeHeader.innerHTML = `${projTitle}`;
-                iframe.src = `${projLink}`;
-                // localStorage.setItem("header", projNames);
-                // localStorage.setItem("link", projLink);
-                // localStorage.setItem("title", projNames);
-                // console.log(localStorage.getItem("title"));
-                // console.log(localStorage.getItem("link"));
-            }
+    for (let i = 0; i < length; i++) {
+        let projTitle = Object.keys(iframeObj)[i];
+        if (projTitle === inputValue) {
+            let projLink = Object.values(iframeObj)[i];
+            iframeHeader.innerHTML = `${projTitle}`;
+            iframe.src = projLink;
+            // localStorage.setItem("header", projNames);
+            // localStorage.setItem("link", projLink);
+            // localStorage.setItem("title", projNames);
+            // console.log(localStorage.getItem("title"));
+            // console.log(localStorage.getItem("link"));
         }
-
+    }
 });
 
 
