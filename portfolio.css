@@ -168,6 +168,9 @@ nav i {
     background: -webkit-linear-gradient(to right, #155799, #159957);
     background: linear-gradient(to right, #155799, #159957);
     box-shadow: 0 0 20px #0e858d;
+    background: -webkit-gradient(linear, to rightcolor-stop(0%, #155799), color-stop(100%, #159957)); /* Safari 4+, Chrome 2+ */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr=transparent); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr=transparent)"; /* IE8+ */  
 }
 
 .gallery .img-container>img {
