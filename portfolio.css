@@ -239,6 +239,8 @@ nav i {
 
 .gallery {
     width: 100%;
+    height: 100%;
+    max-height: 650px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -250,7 +252,6 @@ nav i {
     box-shadow: 0 0 20px #0e858d;
     box-shadow: 0 0 20px #000000;
     overflow: hidden;
-    height: 645px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -484,7 +485,6 @@ footer form:active,
 footer form:hover,
 footer form:focus {
     box-shadow: rgba(0, 0, 0, 0.5) 10px 20px 30px;
-    transform: scale(1.0125);
 }
 
 footer form .form-item1,
@@ -604,6 +604,17 @@ footer .bottom {
     font-weight: 100;
 }
 
+@media (min-width: 768px) {
+    .gallery {
+        object-fit: contain;
+        background-image: contain;
+    }
+    .gallery img {
+        object-fit: contain;
+        background-image: contain;
+    }
+}
+
 @media (max-width: 768px) {
     nav i {
         visibility: visible;
@@ -663,13 +674,6 @@ footer .bottom {
         margin-bottom: 1em;
     }
 
-    .gallery .gallery-bar,
-    .gallery .gallery-bar a {
-        height: 90px;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
     footer {
         display: flex;
         justify-content: center;
@@ -705,17 +709,3 @@ footer .bottom {
         font-size: 1.9rem;
     }
 }
-
-@media (max-width: 450px) {
-    .gallery img {
-        object-fit: contain;
-        background-position: contain;
-        width: 100%;
-        height: 100%;
-        background: -o-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-        background: -moz-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0;
-                background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-                background: -ms-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-                background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
-        }
-    }
