@@ -603,6 +603,12 @@ footer .bottom {
     font-weight: 100;
 }
 
+@media (min-width: 1000px) {
+    .project-display iframe {
+        height: 850px;
+    }
+}
+
 @media (max-width: 1000px) {
     .gallery img {
         object-fit: cover;
