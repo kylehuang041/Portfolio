@@ -14,14 +14,6 @@ mobileMenuIcon.addEventListener('click', () => {
 });
 
 
-// NAV SCROLL CONTROL
-// const nav = document.getElementsByTagName('nav');
-
-// window.onscroll = function () {
-//     nav.style.position = 'fixed';
-// }
-
-
 // GALLERY SECTION
 // my images
 const galleryDict = {
@@ -108,7 +100,6 @@ const iframeObj = {
 }
 
 iframeBtn.addEventListener('click', () => {
-    const length = Object.keys(iframeObj).length;
     const inputValue = iframeSelect.value;
     iframe.title = inputValue;
     iframe.src = binarySearch(iframeObj, inputValue);
