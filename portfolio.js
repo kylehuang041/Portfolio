@@ -171,10 +171,5 @@ document.addEventListener("DOMContentLoaded", () => {
         iframe.src = localStorage.getItem("link");
         iframe.title = localStorage.getItem("title");
         iframeSelect.value = localStorage.getItem("title");
-    } else {
-        iframeHeader.innerHTML = Object.keys(iframeObj)[0];
-        iframe.src = Object.values(iframeObj)[0];
-        iframe.title = Object.keys(iframeObj)[0];
-        iframeSelect.value = Object.keys(iframeObj)[0];
     }
 })
