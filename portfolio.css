@@ -540,7 +540,6 @@ footer .footer-container {
     letter-spacing: 0.2rem;
     font-size: 1.6rem;
     margin-bottom: 50px;
-    position: relative;
 }
 
 footer .footer-container h1 {
@@ -567,28 +566,6 @@ footer .footer-container .personal-info {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: row;
-}
-
-footer .footer-container #footer-bar {
-    visibility: hidden;
-    transform: rotate(90deg);
-    width: 100%;
-    height: 100%;
-    min-width: 250px;
-    max-width: 260px;
-    transition: 0.3s ease-in-out;
-    height: 3px;
-    background: -o-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    background: -moz-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    background: -webkit-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    background: linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    background: -ms-linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    background: linear-gradient(to right, #ffe033, #cec109, #dbdd52);
-    border: 0;
-    outline: none;
-    border-radius: 20px;
-    opacity: 0.5;
-    position: absolute;
 }
 
 footer ul {
@@ -731,12 +708,6 @@ footer .bottom {
     footer .footer-container .personal-info {
         flex-direction: column;
         text-shadow: #000000 3.5px -3.5px 5px;
-    }
-
-    footer .footer-container #footer-bar {
-        transform: rotate(180deg);
-        margin: 20px 0;
-        width: 100%;
     }
 
     footer .footer-container ul {
