@@ -110,15 +110,14 @@ iframeBtn.addEventListener('click', () => {
 function binarySearch(obj, target) {
     const array = Object.keys(obj);
     quickSort(array, 0, array.length - 1);
-    let sortedArray = array;
     let low = 0, high = array.length - 1;
 
     while (low <= high) {
         let mid = Math.floor((low + high) / 2);
 
-        if (compare(sortedArray[mid], target) > 0) {
+        if (compare(array[mid], target) > 0) {
             high = mid - 1;
-        } else if (compare(sortedArray[mid], target) < 0) {
+        } else if (compare(array[mid], target) < 0) {
             low = mid + 1;
         } else {
             let link = obj[target];
