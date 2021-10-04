@@ -1,6 +1,6 @@
 /**
- * Make it responsive, switch images for gallery, change iframe source
- * (not fixed), contact email functionality.
+ * Dynamic part of the website: switch images for gallery, change iframe
+ * website using quick sort and binary search, contact email functionality.
  * @author Kyle Huang
  */
 
