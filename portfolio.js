@@ -63,29 +63,6 @@ const galleryDict = {
     "Bellevue (03): Kyle Huang": "7HuangKyleCHOICEdl0014.JPG",
 };
 
-// const galleryImage = document.querySelector('.gallery-img');
-// const prevBtn = document.querySelector('.prev');
-// const nextBtn = document.querySelector('.next');
-// const galleryDesc = document.querySelector('#img-desc');
-// const galleryLength = Object.keys(galleryDict).length;
-// const galleryImgDesc = Object.keys(galleryDict);
-// const gallerySrc = Object.values(galleryDict);
-// let slideIdx = 0;
-
-// prevBtn.addEventListener('click', () => {
-//     galleryImage.src = `images/${gallerySrc[(slideIdx > 0) ? --slideIdx
-//         : slideIdx = galleryLength - 1]}`;
-//     const desc = galleryImgDesc[slideIdx];
-//     galleryDesc.innerHTML = desc;
-// });
-
-// nextBtn.addEventListener('click', () => {
-//     galleryImage.src = `images/${gallerySrc[(slideIdx < galleryLength - 1)
-//         ? ++slideIdx : slideIdx = 0]}`;
-//     const desc = galleryImgDesc[slideIdx];
-//     galleryDesc.innerHTML = desc;
-// });
-
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const galleryImage = document.querySelector('.gallery-img');
