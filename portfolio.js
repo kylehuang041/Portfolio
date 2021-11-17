@@ -119,7 +119,7 @@ function binarySearch(obj, target) {
         } else if (compare(array[mid], target) < 0) {
             low = mid + 1;
         } else {
-            let link = obj[target];
+            let link = Object.values(iframeObj)[mid];
             return link;
         }
     }
