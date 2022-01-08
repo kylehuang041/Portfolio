@@ -63,6 +63,31 @@ const galleryDict = {
     "Bellevue (03): Kyle Huang": "7HuangKyleCHOICEdl0014.JPG",
 };
 
+function quickSort(array, low, high) {
+    if (low < high) {
+        let pivot = partition(array, low, high);
+        quickSort(array, low, pivot - 1);
+        quickSort(array, pivot + 1, high);
+    }
+}
+
+function partition(array, low, high) {
+    let pivot = array[high];
+    let i = (low - 1);
+    for (let j = low; j <= high - 1; j++) {
+        if (array[j] < pivot) {
+            ++i;
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    let temp = array[++i];
+    array[i] = array[high];
+    array[high] = temp;
+    return i;
+}
+
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const galleryImage = document.querySelector('.gallery-img');
@@ -99,67 +124,15 @@ const iframeObj = {
 }
 
 iframeBtn.addEventListener('click', () => {
+    console.log("CLICKED")
     let inputValue = iframeSelect.value;
+    console.log(inputValue)
     iframe.title = inputValue;
     iframeHeader.innerHTML = inputValue;
+    iframe.src = iframeObj[`${inputValue}`];
     localStorage.setItem("title", inputValue);
     localStorage.setItem("link", iframeObj[inputValue]);
-    iframe.src = binarySearch(iframeObj, inputValue);
 });
-
-function binarySearch(obj, target) {
-    const nameArray = Object.keys(obj);
-    quickSort(nameArray, 0, nameArray.length - 1);
-    const linkArray = [];
-    for (let i = 0; i < nameArray.length; i++) {
-        linkArray.push(obj[nameArray[i]]);
-    }
-    let low = 0, high = nameArray.length - 1;
-
-    while (low <= high) {
-        let mid = Math.floor((low + high) / 2);
-        console.log(mid);
-
-        if (compare(nameArray[mid], target) > 0) {
-            high = mid - 1;
-        } else if (compare(nameArray[mid], target) < 0) {
-            low = mid + 1;
-        } else {
-            const link = linkArray[mid];
-            return link;
-        }
-    }
-}
-
-const compare = function (string1, string2) {
-    return string1 < string2 ? -1
-        : string1 > string2 ? 1 : 0;
-}
-
-function quickSort(array, low, high) {
-    if (low < high) {
-        let pivot = partition(array, low, high);
-        quickSort(array, low, pivot - 1);
-        quickSort(array, pivot + 1, high);
-    }
-}
-
-function partition(array, low, high) {
-    let pivot = array[high];
-    let i = (low - 1);
-    for (let j = low; j <= high - 1; j++) {
-        if (array[j] < pivot) {
-            ++i;
-            let temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    }
-    let temp = array[++i];
-    array[i] = array[high];
-    array[high] = temp;
-    return i;
-}
 
 
 // EMAIL SUBMISSION
