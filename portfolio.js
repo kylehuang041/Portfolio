@@ -94,7 +94,8 @@ const iframeHeader = document.querySelector('#iframeHeader');
 
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
-    "Weather API": "https://sharquan3.github.io/WeatherAPI/"
+    "Weather API": "https://sharquan3.github.io/WeatherAPI/",
+    "Resume": "https://sharquan3.github.io/Resume/"
 }
 
 iframeBtn.addEventListener('click', () => {
