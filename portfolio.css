@@ -161,6 +161,20 @@ nav i {
     text-align: center;
 }
 
+.intro #resume {
+    font-family: var(--alt2);
+    text-shadow: #000000 0px 0px 20px;
+}
+
+.intro .fa-file-download {
+    font-family: var(--download);
+    color: #0b7942;
+}
+
+.intro .fa-file-download:hover {
+    color: #159957;
+}
+
 .projects {
     background: -o-linear-gradient(to right, #ff6a00, #ee0979);
     background: -moz-linear-gradient(to right, #ff6a00, #ee0979);
