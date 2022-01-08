@@ -108,19 +108,24 @@ iframeBtn.addEventListener('click', () => {
 });
 
 function binarySearch(obj, target) {
-    const array = Object.keys(obj);
-    quickSort(array, 0, array.length - 1);
-    let low = 0, high = array.length - 1;
+    const nameArray = Object.keys(obj);
+    quickSort(nameArray, 0, nameArray.length - 1);
+    const linkArray = [];
+    for (let i = 0; i < nameArray.length; i++) {
+        linkArray.push(iframeObj[nameArray[i]]);
+    }
+    let low = 0, high = nameArray.length - 1;
 
     while (low <= high) {
         let mid = Math.floor((low + high) / 2);
+        console.log(mid);
 
-        if (compare(array[mid], target) > 0) {
+        if (compare(nameArray[mid], target) > 0) {
             high = mid - 1;
-        } else if (compare(array[mid], target) < 0) {
+        } else if (compare(nameArray[mid], target) < 0) {
             low = mid + 1;
         } else {
-            let link = Object.values(iframeObj)[mid];
+            const link = linkArray[mid];
             return link;
         }
     }
