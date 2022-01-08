@@ -112,7 +112,7 @@ function binarySearch(obj, target) {
     quickSort(nameArray, 0, nameArray.length - 1);
     const linkArray = [];
     for (let i = 0; i < nameArray.length; i++) {
-        linkArray.push(iframeObj[nameArray[i]]);
+        linkArray.push(obj[nameArray[i]]);
     }
     let low = 0, high = nameArray.length - 1;
 
