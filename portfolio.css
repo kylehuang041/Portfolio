@@ -184,7 +184,19 @@ nav i {
 
 .projects .grid-container {
     display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    display: -webkit-grid;
+    display: -o-grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -moz-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -o-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -webkit-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -moz-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -webkit-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -o-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     font-family: var(--text);
     letter-spacing: 0.2em;
     line-height: 2.2rem;
