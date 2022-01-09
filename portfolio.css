@@ -412,7 +412,7 @@ nav i {
 }
 
 .project-display iframe {
-    width: 100%;
+    width: 80%;
     height: 100%;
     min-width: 280px;
     max-width: 2000px;
