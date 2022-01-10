@@ -124,9 +124,7 @@ const iframeObj = {
 }
 
 iframeBtn.addEventListener('click', () => {
-    console.log("CLICKED")
     let inputValue = iframeSelect.value;
-    console.log(inputValue)
     iframe.title = inputValue;
     iframeHeader.innerHTML = inputValue;
     iframe.src = iframeObj[`${inputValue}`];
@@ -170,7 +168,7 @@ form.addEventListener("submit", handleSubmit());
 document.addEventListener("DOMContentLoaded", () => {
     // window.location.hash = "top";
     if (localStorage.getItem("title") !== null
-        || localStorage.getItem("link") !== null) {
+        && localStorage.getItem("link") !== null) {
         iframeHeader.innerHTML = localStorage.getItem("title");
         iframe.src = localStorage.getItem("link");
         iframe.title = localStorage.getItem("title");
