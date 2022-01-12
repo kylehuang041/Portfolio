@@ -9,7 +9,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
     scroll-behavior: smooth;
+    -webkit-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
+    -o-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
+    -moz-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
+    -ms-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
     scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
 }
 
@@ -27,6 +35,10 @@ nav {
     width: 100%;
     min-height: 60px;
     height: 65px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +49,10 @@ nav {
 
 nav .menu {
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     justify-content: flex-start;
     align-items: center;
 }
@@ -61,6 +77,10 @@ nav .menu a span {
     position: absolute;
     width: 100%;
     height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +98,10 @@ nav .menu a span::after {
     height: 65px;
     background: transparent;
     transition: 0.3s ease-in-out;
+    -webkit-inset: 0;
+    -o-inset: 0;
+    -moz-inset: 0;
+    -ms-inset: 0;
     inset: 0;
     z-index: -1;
 }
@@ -111,6 +135,10 @@ nav i {
 
 .intro {
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -201,7 +229,6 @@ nav i {
     display: -moz-grid;
     display: -webkit-grid;
     display: -o-grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -ms-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
     -moz-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
     -o-grid-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,6 +237,7 @@ nav i {
     -ms-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -webkit-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -o-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     font-family: var(--text);
     letter-spacing: 0.2em;
     line-height: 2.2rem;
@@ -239,6 +267,10 @@ nav i {
     border-radius: 20px 20px 0 0;
     width: 100%;
     height: 300px;
+    -webkit-object-fit: cover;
+    -o-object-fit: cover;
+    -moz-object-fit: cover;
+    -ms-object-fit: cover;
     object-fit: cover;
     outline: none;
     border: 0;
@@ -278,6 +310,10 @@ nav i {
     width: 100%;
     height: 800px;
     position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     flex-direction: column;
     background: -o-linear-gradient(100deg, #155799, #159957);
@@ -312,6 +348,10 @@ nav i {
     width: 100%;
     height: 100%;
     vertical-align: middle;
+    -webkit-object-fit: contain;
+    -o-object-fit: contain;
+    -moz-object-fit: contain;
+    -ms-object-fit: contain;
     object-fit: contain;
     padding: 0 0 50px 0;
     position: relative;
@@ -351,6 +391,10 @@ nav i {
     background: rgb(85, 84, 84);
     width: 50px;
     height: 50px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,6 +431,10 @@ nav i {
 }
 
 .project-display {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,7 +470,15 @@ nav i {
 }
 
 .project-display .project-list-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
+    -webkit-justify-content: space-evenly;
+    -o-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
     justify-content: space-evenly;
     align-items: center;
     padding: 0 0 25px 0;
@@ -478,6 +534,10 @@ footer {
     width: 100%;
     height: 100%;
     font-family: var(--text);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -487,8 +547,24 @@ footer {
 footer form {
     color: var(--text-color);
     background: rgb(5, 24, 56);
+    display: -webkit-grid;
+    display: -o-grid;
+    display: -ms-grid;
+    display: -moz-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-template-columns: 1fr;
+    -o-grid-columns: 1fr;
+    -o-grid-template-columns: 1fr;
+    -moz-grid-columns: 1fr;
+    -moz-grid-template-columns: 1fr;
+    -webkit-grid-columns: 1fr;
+    -webkit-grid-template-columns: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -webkit-grid-area: 10px 1em;
+    -o-grid-area: 10px 1em;
+    -moz-grid-area: 10px 1em;
+    -ms-grid-area: 10px 1em;
     grid-area: 10px 1em;
     border: 1px solid #0F2027;
     border-radius: 20px;
@@ -519,6 +595,10 @@ footer form div {
     letter-spacing: 0.1em;
     flex: 50%;
     width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,6 +626,10 @@ footer form .form-item2 textarea {
     border: none;
     outline: none;
     padding: 1px 2px;
+    -webkit-resize: none;
+    -o-resize: none;
+    -moz-resize: none;
+    -ms-resize: none;
     resize: none;
 }
 
@@ -573,8 +657,16 @@ footer form .form-item2 #status {
 footer .footer-container {
     width: 100%;
     height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     align-items: center;
+    -webkit-justify-content: space-evenly;
+    -o-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
     justify-content: space-evenly;
     flex-direction: column;
     color: var(--text-color);
@@ -604,7 +696,15 @@ footer .footer-container .personal-info h2 {
 footer .footer-container .personal-info {
     width: 100%;
     height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
+    -webkit-justify-content: space-evenly;
+    -o-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: row;
@@ -639,6 +739,10 @@ footer .bottom {
     width: 100%;
     min-height: 50px;
     height: 2vw;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -o-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -706,6 +810,10 @@ footer .bottom {
 
     .gallery img {
         padding: 0 0 85px 0;
+        -webkit-object-fit: cover;
+        -o-object-fit: cover;
+        -moz-object-fit: cover;
+        -ms-object-fit: cover;
         object-fit: contain;
     }
 
@@ -728,14 +836,25 @@ footer .bottom {
     }
 
     footer {
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
     footer form {
+        display: -o-grid;
+        display: -ms-grid;
+        display: -moz-grid;
+        display: -webkit-grid;
         display: grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-template-columns: 1fr;
+        -o-grid-columns: 1fr;
+        -o-grid-template-columns: 1fr;
+        -moz-grid-columns: 1fr;
+        -moz-grid-template-columns: 1fr;
+        -webkit-grid-columns: 1fr;
+        -webkit-grid-template-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
@@ -766,6 +885,10 @@ footer .bottom {
     }
 
     footer .footer-container ul li {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -o-flex;
         display: flex;
         justify-content: center;
         align-items: center;
