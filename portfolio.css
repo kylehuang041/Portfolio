@@ -70,6 +70,7 @@ nav .menu>a {
     width: 10vw;
     height: 65px;
     letter-spacing: 0.05rem;
+    z-index: 3;
 }
 
 nav .menu a span {
