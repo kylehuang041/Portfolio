@@ -4,18 +4,33 @@
  * @author Kyle Huang
  */
 
-// MOBILE MENU SECTION
-const mobileMenuIcon = document.querySelector('.fa-bars');
-const menu = document.querySelector('.menu');
-// const menuLink = document.querySelectorAll('menu-link');
+// SORT
+function quickSort(array, low, high) {
+    if (low < high) {
+        let pivot = partition(array, low, high);
+        quickSort(array, low, pivot - 1);
+        quickSort(array, pivot + 1, high);
+    }
+}
 
-mobileMenuIcon.addEventListener('click', () => {
-    menu.classList.toggle('show');
-});
+function partition(array, low, high) {
+    let pivot = array[high];
+    let i = (low - 1);
+    for (let j = low; j <= high - 1; j++) {
+        if (array[j] < pivot) {
+            ++i;
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    let temp = array[++i];
+    array[i] = array[high];
+    array[high] = temp;
+    return i;
+}
 
-
-// GALLERY SECTION
-// my images
+// GALLERY DATA
 const galleryDict = {
     "Bellevue (01): Kyle Huang": "7HuangKyleCHOICEdl0012.JPG",
     "Snoqualmie (41): Kyle Huang": "7HuangKyleShowcaseOPT0004.jpg",
@@ -63,38 +78,60 @@ const galleryDict = {
     "Bellevue (03): Kyle Huang": "7HuangKyleCHOICEdl0014.JPG",
 };
 
-function quickSort(array, low, high) {
-    if (low < high) {
-        let pivot = partition(array, low, high);
-        quickSort(array, low, pivot - 1);
-        quickSort(array, pivot + 1, high);
-    }
+// PROJECT DISPLAY DATA
+const iframeObj = {
+    "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
+    "Weather API": "https://sharquan3.github.io/WeatherAPI/",
+    "Resume": "https://sharquan3.github.io/Resume/"
 }
 
-function partition(array, low, high) {
-    let pivot = array[high];
-    let i = (low - 1);
-    for (let j = low; j <= high - 1; j++) {
-        if (array[j] < pivot) {
-            ++i;
-            let temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    }
-    let temp = array[++i];
-    array[i] = array[high];
-    array[high] = temp;
-    return i;
-}
 
+// MOBILE MENU ELEMENTS
+const mobileMenuIcon = document.querySelector('.fa-bars');
+const menu = document.querySelector('.menu');
+
+// PHOTO GALLERY ELEMENTS
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const galleryImage = document.querySelector('.gallery-img');
-let gallery = Object.keys(galleryDict);
-quickSort(gallery, 0, gallery.length - 1);
+let gallery;
 const galleryDesc = document.querySelector('#img-desc');
 let slideIdx = 0;
+
+// PROJECT DISPLAY ELEMENTS
+const iframeSelect = document.querySelector('#project-list');
+const iframeBtn = document.querySelector('#iframeBtn');
+const iframe = document.querySelector('#iframe');
+const iframeHeader = document.querySelector('#iframeHeader');
+
+// DOMContentLoaded: LOCAL STORAGE, STARTER SETTINGS
+document.addEventListener("DOMContentLoaded", () => {
+    // PROJECT DISPLAY (Local Storage)
+    if (localStorage.getItem("title") !== null) {
+        let title = localStorage.getItem("title");
+        iframeHeader.innerHTML = title;
+        iframe.title = title;
+        iframeSelect.value = title;
+    }
+    if (localStorage.getItem("link") !== null) {
+        iframe.src = localStorage.getItem("link");
+    }
+
+    // Photo Gallery: array sort
+    gallery = Object.keys(galleryDict);
+    quickSort(gallery, 0, gallery.length - 1);
+})
+
+// EMAIL SUBMISSION CODE
+clearForm = (e) => {
+    e.preventDefault();
+    e.target.reset();
+}
+
+// MOBILE MENU CODE
+mobileMenuIcon.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
 
 prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${galleryDict[gallery[(slideIdx > 0) ? --slideIdx
@@ -111,18 +148,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 
-// IFRAME SELECT MENU (in-progress)
-const iframeSelect = document.querySelector('#project-list');
-const iframeBtn = document.querySelector('#iframeBtn');
-const iframe = document.querySelector('#iframe');
-const iframeHeader = document.querySelector('#iframeHeader');
-
-const iframeObj = {
-    "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
-    "Weather API": "https://sharquan3.github.io/WeatherAPI/",
-    "Resume": "https://sharquan3.github.io/Resume/"
-}
-
+// PROJECT DISPLAY MENU CODE
 iframeBtn.addEventListener('click', () => {
     let inputValue = iframeSelect.value;
     iframe.title = inputValue;
@@ -131,41 +157,3 @@ iframeBtn.addEventListener('click', () => {
     localStorage.setItem("title", inputValue);
     localStorage.setItem("link", iframeObj[inputValue]);
 });
-
-
-// EMAIL SUBMISSION
-// API code from Formspree
-var form = document.getElementById("form");
-
-async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        status.innerHTML = "Thank you";
-        form.reset()
-    }).catch(error => {
-        status.innerHTML = "There was a problem, make sure to enable all scripts";
-    });
-}
-
-form.addEventListener("submit", handleSubmit());
-
-
-// DOMContentLoaded: LOCAL STORAGE
-document.addEventListener("DOMContentLoaded", () => {
-    // window.location.hash = "top";
-    if (localStorage.getItem("title") !== null
-        && localStorage.getItem("link") !== null) {
-        iframeHeader.innerHTML = localStorage.getItem("title");
-        iframe.src = localStorage.getItem("link");
-        iframe.title = localStorage.getItem("title");
-        iframeSelect.value = localStorage.getItem("title");
-    }
-})
