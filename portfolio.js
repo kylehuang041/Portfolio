@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // PROJECT DISPLAY (Local Storage)
     if (localStorage.getItem("title") !== null) {
         let title = localStorage.getItem("title");
-        iframeHeader.innerHTML = title;
+        iframeHeader.textContent = title;
         iframe.title = title;
         iframeSelect.value = title;
     }
@@ -137,14 +137,14 @@ prevBtn.addEventListener('click', () => {
     galleryImage.src = `images/${galleryDict[gallery[(slideIdx > 0) ? --slideIdx
         : slideIdx = gallery.length - 1]]}`;
     let desc = gallery[slideIdx];
-    galleryDesc.innerHTML = desc;
+    galleryDesc.textContent = desc;
 });
 
 nextBtn.addEventListener('click', () => {
     galleryImage.src = `images/${galleryDict[gallery[(slideIdx < gallery.length - 1)
         ? ++slideIdx : slideIdx = 0]]}`;
     let desc = gallery[slideIdx];
-    galleryDesc.innerHTML = desc;
+    galleryDesc.textContent = desc;
 });
 
 
@@ -152,7 +152,7 @@ nextBtn.addEventListener('click', () => {
 iframeBtn.addEventListener('click', () => {
     let inputValue = iframeSelect.value;
     iframe.title = inputValue;
-    iframeHeader.innerHTML = inputValue;
+    iframeHeader.textContent = inputValue;
     iframe.src = iframeObj[`${inputValue}`];
     localStorage.setItem("title", inputValue);
     localStorage.setItem("link", iframeObj[inputValue]);
