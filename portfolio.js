@@ -81,8 +81,8 @@ const galleryDict = {
 // PROJECT DISPLAY DATA
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
-    "Weather API": "https://sharquan3.github.io/WeatherAPI/",
-    "Resume": "https://sharquan3.github.io/Resume/"
+    "Weather API": "https://kylehuang041.github.io/WeatherAPI/",
+    "Resume": "https://kylehuang041.github.io/Resume/"
 }
 
 
