@@ -120,12 +120,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Photo Gallery: array sort
     gallery = Object.keys(galleryDict);
     quickSort(gallery, 0, gallery.length - 1);
+
+    document.querySelector('form').reset();
 })
 
 // EMAIL SUBMISSION CODE
 clearForm = (e) => {
     e.preventDefault();
     e.target.reset();
+    alert("Testing: " + e.target)
 }
 
 // MOBILE MENU CODE
