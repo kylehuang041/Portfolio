@@ -1,6 +1,6 @@
 /**
  * Dynamic part of the website: switch images for gallery, change iframe
- * website using quick sort and binary search, contact email functionality.
+ * website using quick sort, and contact email functionality with API.
  * @author Kyle Huang
  */
 
