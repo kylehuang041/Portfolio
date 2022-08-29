@@ -124,13 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('form').reset();
 })
 
-// EMAIL SUBMISSION CODE
-clearForm = (e) => {
-    e.preventDefault();
-    e.target.reset();
-    alert("Testing: " + e.target)
-}
-
 // MOBILE MENU CODE
 mobileMenuIcon.addEventListener('click', () => {
     menu.classList.toggle('show');
