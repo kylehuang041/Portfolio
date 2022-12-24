@@ -106,7 +106,7 @@ const iframe = document.querySelector('#iframe');
 const iframeHeader = document.querySelector('#iframeHeader');
 
 // DOMContentLoaded: LOCAL STORAGE, STARTER SETTINGS
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("load", () => {
     // PROJECT DISPLAY (Local Storage)
     if (localStorage.getItem("title") !== null) {
         let title = localStorage.getItem("title");
