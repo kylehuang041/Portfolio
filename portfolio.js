@@ -82,7 +82,8 @@ const galleryDict = {
 const iframeObj = {
     "Family Business Website": "https://tiffanylashandspa.github.io/Tiffany/",
     "Weather App": "https://kylehuang041.github.io/WeatherApp/",
-    "Resume": "https://kylehuang041.github.io/Resume/"
+    "Resume": "https://kylehuang041.github.io/Resume/",
+    "BlogIt (static)": "https://kylehuang041.github.io/BlogIt/"
 }
 
 
