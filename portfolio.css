@@ -9,6 +9,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    --text-color: ghostwhite;
+    --text: 'Indie Flower';
+    --title: 'Teko';
+    --alt: 'Permanent Marker';
+    --alt2: "Oswald";
+}
+
+html, iframe {
     -webkit-scroll-behavior: smooth;
     -o-scroll-behavior: smooth;
     -moz-scroll-behavior: smooth;
@@ -19,15 +31,6 @@
     -moz-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
     -ms-scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
     scrollbar-color: rgb(99, 98, 98) rgb(49, 49, 49);
-}
-
-:root {
-    font-size: 16px;
-    --text-color: ghostwhite;
-    --text: 'Indie Flower';
-    --title: 'Teko';
-    --alt: 'Permanent Marker';
-    --alt2: "Oswald";
 }
 
 nav {
