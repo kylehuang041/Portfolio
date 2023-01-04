@@ -8,6 +8,8 @@
 (function() {
 	window.addEventListener("load", init);
 
+	let slideIdx = 0; // gallery slide index
+
 	// GALLERY DATA
 	const GALLERY_DICT = {
 		"Bellevue (01): Kyle Huang": "7HuangKyleCHOICEdl0012.JPG",
@@ -75,42 +77,71 @@
 		// PHOTO GALLERY ELEMENTS
 		let prevBtn = document.querySelector('.prev');
 		let nextBtn = document.querySelector('.next');
-		let galleryImage = document.querySelector('.gallery-img');
-		let galleryDesc = document.querySelector('#img-desc');
-		let slideIdx = 0;
 
 		// PROJECT DISPLAY ELEMENTS
 		let iframeBtn = document.querySelector('#iframeBtn');
-
 		getProjectDataFromLocalStorage(); // set iframe project from local storage
 		document.querySelector('form').reset(); // reset contact form
-
-		// Photo Gallery: array sort
-		let gallery = Object.keys(GALLERY_DICT);
-		quickSort(gallery, 0, gallery.length - 1);
 
 		// when on smaller screen, show hamburger icon
 		mobileMenuIcon.addEventListener('click', () => menu.classList.toggle('show'));
 
+		// Photo Gallery
+		let gallery = Object.keys(GALLERY_DICT);
+		quickSort(gallery, 0, gallery.length - 1);
+		getGallerySlideFromLocalStorage(gallery);
+
 		// gallery previous button
-		prevBtn.addEventListener('click', () => {
-			galleryImage.src = `images/${GALLERY_DICT[gallery[(slideIdx > 0) ? --slideIdx
-				: slideIdx = gallery.length - 1]]}`;
-			let desc = gallery[slideIdx];
-			galleryDesc.textContent = desc;
+		prevBtn.addEventListener('click', (ev) => {
+			ev.preventDefault();
+			changeGalleryPhotos(true, gallery);
 		});
 
 		// gallery next button
-		nextBtn.addEventListener('click', () => {
-			galleryImage.src = `images/${GALLERY_DICT[gallery[(slideIdx < gallery.length - 1)
-				? ++slideIdx : slideIdx = 0]]}`;
-			let desc = gallery[slideIdx];
-			galleryDesc.textContent = desc;
+		nextBtn.addEventListener('click', (ev) => {
+			ev.preventDefault();
+			changeGalleryPhotos(false, gallery);
 		});
-
 
 		// PROJECT DISPLAY MENU CODE
 		iframeBtn.addEventListener('click', changeProject);
+	}
+
+	/**
+	 * changes gallery pictures
+	 * @param isLeft {boolean} True if previous photo. Otherwise, next photo.
+	 * @param gallery {string[]} gallery photo names
+	 */
+	function changeGalleryPhotos(isLeft, gallery) {
+		let galleryImage = document.querySelector('.gallery-img');
+		let galleryDesc = document.querySelector('#img-desc');
+
+		// go to previous photo
+		if (isLeft)
+			galleryImage.src = `images/${GALLERY_DICT[gallery[(slideIdx > 0) ? --slideIdx
+        : slideIdx = gallery.length - 1]]}`;
+
+		// go to next photo
+		else
+			galleryImage.src = `images/${GALLERY_DICT[gallery[(slideIdx < gallery.length - 1)
+				? ++slideIdx : slideIdx = 0]]}`;
+
+		galleryDesc.textContent = gallery[slideIdx];
+		localStorage.setItem("slideIdx", JSON.stringify(slideIdx));
+	}
+
+	/**
+	 * get gallery slide number from local storage and set saved photo
+	 * @param gallery {string[]} gallery photo names
+	 */
+	function getGallerySlideFromLocalStorage(gallery) {
+		let galleryImage = document.querySelector('.gallery-img');
+		let galleryDesc = document.querySelector('#img-desc');
+		let savedSlideIdx = JSON.parse(localStorage.getItem("slideIdx"));
+
+		slideIdx = savedSlideIdx;
+		galleryDesc.textContent = gallery[slideIdx];
+		if (savedSlideIdx) galleryImage.src = `images/${GALLERY_DICT[gallery[`${savedSlideIdx}`]]}`;
 	}
 
 	/**
